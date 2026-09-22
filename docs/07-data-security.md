@@ -1,3 +1,29 @@
+---
+aliases:
+  - "数据安全"
+type: "standard"
+domain: "data-security"
+phase:
+  - "protect"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/data-security"
+  - "security/priority/p0"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/02-assets-and-network-architecture]]"
+  - "[[docs/04-identity-and-access-control]]"
+  - "[[docs/21-cryptography-pki-kms-and-secrets]]"
+  - "[[docs/26-privacy-and-personal-data-protection]]"
+  - "[[docs/27-third-party-risk-management]]"
+  - "[[docs/06-application-and-api-security]]"
+  - "[[docs/25-email-and-collaboration-security]]"
+---
 # 07 - 数据安全
 
 > 本文档用于规范数据从采集、传输、存储、使用、共享、导出、备份、归档到删除的全生命周期安全要求。具体法律、监管、客户合同与行业要求由公司法务/合规根据实际适用范围确认，本章不假定公司当然适用某一特定法规。
@@ -433,3 +459,16 @@ DLP、细粒度数据访问治理、异常数据访问分析、自动保留/销�
 |---|---|---|
 | V0.1 | 2026-09 | 建立数据安全基本框架 |
 | V0.2 | 2026-09 | 完善分类分级、数据库、导出、测试数据、密钥、第三方和生命周期治理 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/02-assets-and-network-architecture|02 资产与网络架构]] · [[docs/04-identity-and-access-control|04 身份与访问控制]]
+- **下游知识**：[[docs/21-cryptography-pki-kms-and-secrets|21 密码学、PKI、KMS 与 Secret 治理]] · [[docs/26-privacy-and-personal-data-protection|26 隐私与个人信息保护]] · [[docs/27-third-party-risk-management|27 第三方风险管理]]
+- **横向关联**：[[docs/06-application-and-api-security|06 应用与 API 安全]] · [[docs/25-email-and-collaboration-security|25 邮件与协作平台安全]]
+
+<!-- obsidian-relations:end -->

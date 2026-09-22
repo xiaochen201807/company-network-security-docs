@@ -1,3 +1,21 @@
+---
+aliases:
+  - "Secret Leak Playbook"
+type: "playbook"
+domain: "operations"
+phase:
+  - "respond"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/playbook"
+  - "security/domain/operations"
+  - "security/priority/p1"
+  - "security/phase/respond"
+parent:
+  - "[[docs/knowledge-map]]"
+---
 # Secret Leak Playbook
 
 | Metadata | Value |

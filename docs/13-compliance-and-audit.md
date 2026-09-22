@@ -1,3 +1,25 @@
+---
+aliases:
+  - "合规与审计"
+type: "standard"
+domain: "audit"
+phase:
+  - "govern"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/audit"
+  - "security/priority/p1"
+  - "security/phase/govern"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/00-security-overview]]"
+  - "[[docs/01-governance-and-policy]]"
+  - "[[docs/14-security-baselines-and-checklists]]"
+---
 # 13 - 合规与审计
 
 > 本文档用于把公司安全控制转换为可验证、可追溯的证据和整改闭环。具体适用法律、监管、行业标准、客户合同和认证要求必须由公司法务、合规、业务和安全根据实际情况确认，本章不假定公司当然适用某一特定框架。
@@ -439,3 +461,16 @@ Scorecard 用于发现投入优先级与能力差距，不建议直接形成简�
 | V0.1 | 2026-09 | 建立审计框架 |
 | V0.2 | 2026-09 | 完善适用性、控制库、证据、审计整改和持续控制监控 |
 | V0.3 | 2026-09 | 增加基于 OWASP SAMM 思路的 Security Maturity Scorecard |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/00-security-overview|00 公司安全体系总览]] · [[docs/01-governance-and-policy|01 安全治理与制度]]
+- **下游知识**：无
+- **横向关联**：[[docs/14-security-baselines-and-checklists|14 安全基线与检查清单]]
+
+<!-- obsidian-relations:end -->

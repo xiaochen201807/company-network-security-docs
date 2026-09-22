@@ -1,3 +1,29 @@
+---
+aliases:
+  - "密码学、PKI、KMS 与 Secret 治理"
+type: "standard"
+domain: "cryptography"
+phase:
+  - "protect"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/cryptography"
+  - "security/priority/p1"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/04-identity-and-access-control]]"
+  - "[[docs/07-data-security]]"
+  - "[[docs/06-application-and-api-security]]"
+  - "[[docs/08-devsecops-and-supply-chain]]"
+  - "[[docs/16-cloud-and-workload-security]]"
+  - "[[docs/22-security-engineering-platform]]"
+  - "[[docs/15-zero-trust-and-device-trust]]"
+---
 # 21 - 密码学、PKI、KMS 与 Secret 治理
 
 > 本文档用于统一公司密码学算法、TLS、证书、PKI、KMS/HSM、应用 Secret、代码签名密钥和密钥生命周期管理。目标是避免不同团队自行选择算法、散落密钥或在无法轮换的情况下形成长期高风险依赖。
@@ -457,3 +483,16 @@ Secret Scan 覆盖：
 | 版本 | 日期 | 说明 |
 |---|---|---|
 | V0.1 | 2026-09 | 建立密码学、PKI、KMS 和 Secret 治理体系 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/04-identity-and-access-control|04 身份与访问控制]] · [[docs/07-data-security|07 数据安全]]
+- **下游知识**：[[docs/06-application-and-api-security|06 应用与 API 安全]] · [[docs/08-devsecops-and-supply-chain|08 DevSecOps 与供应链安全]] · [[docs/16-cloud-and-workload-security|16 云与 Workload 安全]] · [[docs/22-security-engineering-platform|22 Security Engineering Platform]]
+- **横向关联**：[[docs/15-zero-trust-and-device-trust|15 Zero Trust 与设备可信]]
+
+<!-- obsidian-relations:end -->

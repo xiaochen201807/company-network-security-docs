@@ -1,6 +1,36 @@
+---
+aliases:
+  - "公司安全体系总览"
+type: "overview"
+domain: "governance"
+phase:
+  - "govern"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/overview"
+  - "security/domain/governance"
+  - "security/priority/p0"
+  - "security/phase/govern"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/01-governance-and-policy]]"
+  - "[[docs/02-assets-and-network-architecture]]"
+  - "[[docs/04-identity-and-access-control]]"
+  - "[[docs/06-application-and-api-security]]"
+  - "[[docs/09-vulnerability-and-penetration-testing]]"
+  - "[[docs/10-monitoring-and-security-operations]]"
+  - "[[docs/11-incident-response]]"
+  - "[[docs/12-backup-dr-and-reliability]]"
+  - "[[docs/13-compliance-and-audit]]"
+---
 # 00 - 公司安全体系总览
 
 > 本文档定义公司信息与网络安全体系的总体框架、治理原则、控制域、角色分工、风险闭环和建设路线。体系参考 NIST CSF 2.0 的 Govern、Identify、Protect、Detect、Respond、Recover 六类功能，并结合 CIS Controls v8.1 的优先化实践进行公司化落地；参考不代表公司自动满足任何外部认证或监管要求。
+
+> 如果需要快速理解 00～30 各章节之间的关系，优先查看 **[公司安全知识图谱](knowledge-map.md)**。
 
 ## 1. 建设目标
 
@@ -225,3 +255,16 @@ Critical/High 风险至少明确系统负责人、整改负责人和截止日期
 | V0.2 | 2026-09 | 按六大安全功能完善整体体系 |
 | V0.3 | 2026-09 | 增加 15～24 进阶安全能力与安全成熟度模型 |
 | V0.4 | 2026-09 | 升级为 Security Program V2.0，增加治理工件与 25～30 企业级安全域 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：无
+- **下游知识**：[[docs/01-governance-and-policy|01 安全治理与制度]] · [[docs/02-assets-and-network-architecture|02 资产与网络架构]] · [[docs/04-identity-and-access-control|04 身份与访问控制]] · [[docs/06-application-and-api-security|06 应用与 API 安全]] · [[docs/09-vulnerability-and-penetration-testing|09 漏洞管理与授权渗透测试]] · [[docs/10-monitoring-and-security-operations|10 日志监控与安全运营]] · [[docs/11-incident-response|11 安全事件与应急响应]] · [[docs/12-backup-dr-and-reliability|12 备份容灾与稳定性协同]] · [[docs/13-compliance-and-audit|13 合规与审计]]
+- **横向关联**：无
+
+<!-- obsidian-relations:end -->

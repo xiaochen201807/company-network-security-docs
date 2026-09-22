@@ -1,3 +1,21 @@
+---
+aliases:
+  - "资产台账模板"
+type: "template"
+domain: "template"
+phase:
+  - "govern"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/template"
+  - "security/domain/template"
+  - "security/priority/p1"
+  - "security/phase/govern"
+parent:
+  - "[[docs/knowledge-map]]"
+---
 # 资产台账模板
 
 ## 基本信息

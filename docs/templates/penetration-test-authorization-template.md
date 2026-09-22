@@ -1,3 +1,21 @@
+---
+aliases:
+  - "授权渗透测试申请模板"
+type: "template"
+domain: "template"
+phase:
+  - "govern"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/template"
+  - "security/domain/template"
+  - "security/priority/p1"
+  - "security/phase/govern"
+parent:
+  - "[[docs/knowledge-map]]"
+---
 # 授权渗透测试申请模板
 
 > 所有主动安全测试必须在明确授权范围内开展。本模板用于确认测试对象、人员、时间、允许行为、禁止行为和紧急停止机制。

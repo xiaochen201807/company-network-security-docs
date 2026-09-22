@@ -1,3 +1,28 @@
+---
+aliases:
+  - "Zero Trust 与设备可信"
+type: "standard"
+domain: "zero-trust"
+phase:
+  - "protect"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/zero-trust"
+  - "security/priority/p1"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/02-assets-and-network-architecture]]"
+  - "[[docs/04-identity-and-access-control]]"
+  - "[[docs/05-endpoint-and-server-security]]"
+  - "[[docs/03-network-and-perimeter-security]]"
+  - "[[docs/16-cloud-and-workload-security]]"
+  - "[[docs/21-cryptography-pki-kms-and-secrets]]"
+---
 # 15 - Zero Trust 与设备可信
 
 > 本文档用于将公司访问控制从“连入公司网络即获得较高信任”逐步演进为基于身份、设备、资源和风险上下文的动态访问控制。参考 NIST SP 800-207 与云原生零信任实践，核心原则是不因用户、设备或服务位于内网而自动授予信任。
@@ -409,3 +434,16 @@ Internal Application
 | 版本 | 日期 | 说明 |
 |---|---|---|
 | V0.1 | 2026-09 | 建立 Zero Trust 与设备可信框架 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/02-assets-and-network-architecture|02 资产与网络架构]] · [[docs/04-identity-and-access-control|04 身份与访问控制]] · [[docs/05-endpoint-and-server-security|05 终端与服务器安全]]
+- **下游知识**：无
+- **横向关联**：[[docs/03-network-and-perimeter-security|03 网络与边界安全]] · [[docs/16-cloud-and-workload-security|16 云与 Workload 安全]] · [[docs/21-cryptography-pki-kms-and-secrets|21 密码学、PKI、KMS 与 Secret 治理]]
+
+<!-- obsidian-relations:end -->

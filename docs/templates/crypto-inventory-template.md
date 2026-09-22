@@ -1,3 +1,21 @@
+---
+aliases:
+  - "Crypto / Key Inventory 模板"
+type: "template"
+domain: "template"
+phase:
+  - "govern"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/template"
+  - "security/domain/template"
+  - "security/priority/p1"
+  - "security/phase/govern"
+parent:
+  - "[[docs/knowledge-map]]"
+---
 # Crypto / Key Inventory 模板
 
 | System | Owner | Purpose | Algorithm | Key Type | Key Length | Storage | KMS/HSM | Rotation | Expiry | Last Rotated | Status |

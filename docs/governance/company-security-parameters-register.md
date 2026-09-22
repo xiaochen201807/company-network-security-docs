@@ -1,3 +1,24 @@
+---
+aliases:
+  - "公司安全参数登记表"
+type: "register"
+domain: "governance"
+phase:
+  - "govern"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/register"
+  - "security/domain/governance"
+  - "security/priority/p0"
+  - "security/phase/govern"
+parent:
+  - "[[docs/governance/README]]"
+related:
+  - "[[docs/governance/security-current-target-profile]]"
+  - "[[docs/00-security-overview]]"
+---
 # 公司安全参数登记表
 
 > 用于收敛各章节“当前待确认”项。此表填写公司真实参数后，各 Domain Standard 只引用这里，不再到处复制相同 TODO。

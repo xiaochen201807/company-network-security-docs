@@ -1,3 +1,28 @@
+---
+aliases:
+  - "Security Engineering Platform"
+type: "standard"
+domain: "security-platform"
+phase:
+  - "protect"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/security-platform"
+  - "security/priority/p1"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/06-application-and-api-security]]"
+  - "[[docs/08-devsecops-and-supply-chain]]"
+  - "[[docs/17-security-architecture-and-threat-modeling]]"
+  - "[[docs/21-cryptography-pki-kms-and-secrets]]"
+  - "[[docs/18-product-security-and-secure-by-default]]"
+  - "[[docs/14-security-baselines-and-checklists]]"
+---
 # 22 - Security Engineering Platform 与 Golden Path
 
 > 本文档用于把安全从“安全团队发规范、研发手工遵守”演进为“研发默认使用的平台和模板天然具备安全能力”。核心目标是减少安全摩擦并让 Secure by Default 成为工程默认路径。
@@ -526,3 +551,16 @@ Scorecard 用于改进，不宜粗暴变成绩效排名。
 | 版本 | 日期 | 说明 |
 |---|---|---|
 | V0.1 | 2026-09 | 建立 Security Engineering Platform 与 Golden Path 体系 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/06-application-and-api-security|06 应用与 API 安全]] · [[docs/08-devsecops-and-supply-chain|08 DevSecOps 与供应链安全]] · [[docs/17-security-architecture-and-threat-modeling|17 安全架构评审与 Threat Modeling]] · [[docs/21-cryptography-pki-kms-and-secrets|21 密码学、PKI、KMS 与 Secret 治理]]
+- **下游知识**：[[docs/18-product-security-and-secure-by-default|18 Product Security 与 Secure by Default]]
+- **横向关联**：[[docs/14-security-baselines-and-checklists|14 安全基线与检查清单]]
+
+<!-- obsidian-relations:end -->

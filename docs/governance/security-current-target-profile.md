@@ -1,3 +1,25 @@
+---
+aliases:
+  - "Security Current Target Profile"
+type: "profile"
+domain: "governance"
+phase:
+  - "govern"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/profile"
+  - "security/domain/governance"
+  - "security/priority/p0"
+  - "security/phase/govern"
+parent:
+  - "[[docs/governance/README]]"
+related:
+  - "[[docs/governance/security-control-catalog]]"
+  - "[[docs/governance/company-security-parameters-register]]"
+  - "[[docs/13-compliance-and-audit]]"
+---
 # Security Current / Target Profile
 
 > 本文档用于区分“文档已经定义”与“公司真实已经实施”。Current 必须基于真实证据评估，不能因为规范中写了某项要求就判断为已实施。

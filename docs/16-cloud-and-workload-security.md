@@ -1,3 +1,32 @@
+---
+aliases:
+  - "云与 Workload 安全"
+type: "standard"
+domain: "cloud-security"
+phase:
+  - "protect"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/cloud-security"
+  - "security/priority/p1"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/02-assets-and-network-architecture]]"
+  - "[[docs/03-network-and-perimeter-security]]"
+  - "[[docs/04-identity-and-access-control]]"
+  - "[[docs/05-endpoint-and-server-security]]"
+  - "[[docs/08-devsecops-and-supply-chain]]"
+  - "[[docs/12-backup-dr-and-reliability]]"
+  - "[[docs/14-security-baselines-and-checklists]]"
+  - "[[docs/15-zero-trust-and-device-trust]]"
+  - "[[docs/21-cryptography-pki-kms-and-secrets]]"
+  - "[[docs/22-security-engineering-platform]]"
+---
 # 16 - 云与 Workload 安全
 
 > 本文档用于统一云账号、云身份、网络、Workload Identity、容器、Kubernetes、云日志、CSPM 和运行时安全要求，使云环境不成为传统安全体系之外的独立“例外区域”。
@@ -457,3 +486,16 @@ State 可能包含敏感信息。
 | 版本 | 日期 | 说明 |
 |---|---|---|
 | V0.1 | 2026-09 | 建立云与 Workload 安全框架 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/02-assets-and-network-architecture|02 资产与网络架构]] · [[docs/03-network-and-perimeter-security|03 网络与边界安全]] · [[docs/04-identity-and-access-control|04 身份与访问控制]] · [[docs/05-endpoint-and-server-security|05 终端与服务器安全]]
+- **下游知识**：无
+- **横向关联**：[[docs/08-devsecops-and-supply-chain|08 DevSecOps 与供应链安全]] · [[docs/12-backup-dr-and-reliability|12 备份容灾与稳定性协同]] · [[docs/14-security-baselines-and-checklists|14 安全基线与检查清单]] · [[docs/15-zero-trust-and-device-trust|15 Zero Trust 与设备可信]] · [[docs/21-cryptography-pki-kms-and-secrets|21 密码学、PKI、KMS 与 Secret 治理]] · [[docs/22-security-engineering-platform|22 Security Engineering Platform]]
+
+<!-- obsidian-relations:end -->

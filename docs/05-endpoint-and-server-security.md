@@ -1,3 +1,30 @@
+---
+aliases:
+  - "终端与服务器安全"
+type: "standard"
+domain: "endpoint"
+phase:
+  - "protect"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/endpoint"
+  - "security/priority/p0"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/02-assets-and-network-architecture]]"
+  - "[[docs/03-network-and-perimeter-security]]"
+  - "[[docs/04-identity-and-access-control]]"
+  - "[[docs/10-monitoring-and-security-operations]]"
+  - "[[docs/14-security-baselines-and-checklists]]"
+  - "[[docs/15-zero-trust-and-device-trust]]"
+  - "[[docs/29-physical-and-media-security]]"
+  - "[[docs/16-cloud-and-workload-security]]"
+---
 # 05 - 终端与服务器安全
 
 > 本文档用于规范 Windows、Linux、办公终端、生产服务器、虚拟机、中间件宿主机的基线、补丁、EDR、日志、远程管理和恶意软件防护。
@@ -407,3 +434,16 @@ EDR、补丁台账、公网 SSH/RDP 清理、默认口令处理、时间同步�
 |---|---|---|
 | V0.1 | 2026-09 | 建立主机基线方向 |
 | V0.2 | 2026-09 | 完善 Linux/Windows、EDR、补丁、中间件、日志和持续基线 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/02-assets-and-network-architecture|02 资产与网络架构]] · [[docs/03-network-and-perimeter-security|03 网络与边界安全]] · [[docs/04-identity-and-access-control|04 身份与访问控制]]
+- **下游知识**：[[docs/10-monitoring-and-security-operations|10 日志监控与安全运营]] · [[docs/14-security-baselines-and-checklists|14 安全基线与检查清单]] · [[docs/15-zero-trust-and-device-trust|15 Zero Trust 与设备可信]] · [[docs/29-physical-and-media-security|29 物理、环境与介质安全]]
+- **横向关联**：[[docs/16-cloud-and-workload-security|16 云与 Workload 安全]]
+
+<!-- obsidian-relations:end -->

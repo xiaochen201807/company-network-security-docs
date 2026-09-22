@@ -1,3 +1,30 @@
+---
+aliases:
+  - "日志监控与安全运营"
+type: "standard"
+domain: "security-operations"
+phase:
+  - "detect"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/security-operations"
+  - "security/priority/p1"
+  - "security/phase/detect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/02-assets-and-network-architecture]]"
+  - "[[docs/03-network-and-perimeter-security]]"
+  - "[[docs/04-identity-and-access-control]]"
+  - "[[docs/05-endpoint-and-server-security]]"
+  - "[[docs/09-vulnerability-and-penetration-testing]]"
+  - "[[docs/11-incident-response]]"
+  - "[[docs/19-threat-intelligence-redteam-purpleteam]]"
+  - "[[docs/25-email-and-collaboration-security]]"
+---
 # 10 - 日志监控与安全运营
 
 > 本文档用于建立公司统一的安全日志、集中监控、告警、检测规则、处置 Runbook 和安全运营度量体系，使安全问题能够被及时发现、分析、升级和闭环。
@@ -513,3 +540,16 @@ Detection Rule 成熟阶段采用 Detection-as-Code：
 | V0.1 | 2026-09 | 建立日志监控基本框架 |
 | V0.2 | 2026-09 | 完善日志源、检测场景、告警治理、Runbook、指标和运营流程 |
 | V0.3 | 2026-09 | 增加 ATT&CK、Detection Validation、Purple Team 与 Detection-as-Code 思路 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/02-assets-and-network-architecture|02 资产与网络架构]] · [[docs/03-network-and-perimeter-security|03 网络与边界安全]] · [[docs/04-identity-and-access-control|04 身份与访问控制]] · [[docs/05-endpoint-and-server-security|05 终端与服务器安全]] · [[docs/09-vulnerability-and-penetration-testing|09 漏洞管理与授权渗透测试]]
+- **下游知识**：[[docs/11-incident-response|11 安全事件与应急响应]] · [[docs/19-threat-intelligence-redteam-purpleteam|19 威胁情报、Red Team 与 Purple Team]]
+- **横向关联**：[[docs/25-email-and-collaboration-security|25 邮件与协作平台安全]]
+
+<!-- obsidian-relations:end -->

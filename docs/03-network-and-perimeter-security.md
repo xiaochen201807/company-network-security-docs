@@ -1,3 +1,29 @@
+---
+aliases:
+  - "网络与边界安全"
+type: "standard"
+domain: "network"
+phase:
+  - "protect"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/network"
+  - "security/priority/p0"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/02-assets-and-network-architecture]]"
+  - "[[docs/04-identity-and-access-control]]"
+  - "[[docs/05-endpoint-and-server-security]]"
+  - "[[docs/14-security-baselines-and-checklists]]"
+  - "[[docs/15-zero-trust-and-device-trust]]"
+  - "[[docs/16-cloud-and-workload-security]]"
+  - "[[docs/10-monitoring-and-security-operations]]"
+---
 # 03 - 网络与边界安全
 
 > 本文档规范公司网络区域、边界访问、防火墙、VPN、DNS、互联网出口、管理面、公网暴露和网络安全审计。
@@ -301,3 +327,16 @@ VPN MFA、堡垒机/PAM、DNS/Proxy 日志集中、东西向检测、网络策�
 |---|---|---|
 | V0.1 | 2026-09 | 建立网络框架 |
 | V0.2 | 2026-09 | 完善分区、防火墙、VPN、DNS、出口、检测和审计 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/02-assets-and-network-architecture|02 资产与网络架构]] · [[docs/04-identity-and-access-control|04 身份与访问控制]]
+- **下游知识**：[[docs/05-endpoint-and-server-security|05 终端与服务器安全]] · [[docs/14-security-baselines-and-checklists|14 安全基线与检查清单]] · [[docs/15-zero-trust-and-device-trust|15 Zero Trust 与设备可信]] · [[docs/16-cloud-and-workload-security|16 云与 Workload 安全]]
+- **横向关联**：[[docs/10-monitoring-and-security-operations|10 日志监控与安全运营]]
+
+<!-- obsidian-relations:end -->

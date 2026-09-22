@@ -1,3 +1,29 @@
+---
+aliases:
+  - "隐私与个人信息保护"
+type: "standard"
+domain: "privacy"
+phase:
+  - "govern"
+  - "protect"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/privacy"
+  - "security/priority/p1"
+  - "security/phase/govern"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/07-data-security]]"
+  - "[[docs/25-email-and-collaboration-security]]"
+  - "[[docs/18-product-security-and-secure-by-default]]"
+  - "[[docs/23-ai-llm-agent-security]]"
+  - "[[docs/27-third-party-risk-management]]"
+---
 # 26 - 隐私与个人信息保护
 
 > 本文档提供 Privacy Engineering 与个人信息治理的安全框架。实际法律义务必须由法务/隐私专业人员根据公司所在地区、客户、员工和业务场景确认。
@@ -264,3 +290,16 @@ AI/RAG：
 ## 25. 关联控制
 
 SEC-PRI-001、SEC-DAT-*、SEC-TPR-*、SEC-AI-*。
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/07-data-security|07 数据安全]] · [[docs/25-email-and-collaboration-security|25 邮件与协作平台安全]]
+- **下游知识**：无
+- **横向关联**：[[docs/18-product-security-and-secure-by-default|18 Product Security 与 Secure by Default]] · [[docs/23-ai-llm-agent-security|23 AI、LLM 与 Agent 安全]] · [[docs/27-third-party-risk-management|27 第三方风险管理]]
+
+<!-- obsidian-relations:end -->

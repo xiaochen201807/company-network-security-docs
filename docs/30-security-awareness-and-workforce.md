@@ -1,3 +1,31 @@
+---
+aliases:
+  - "安全意识、Security Champion 与安全人才体系"
+type: "standard"
+domain: "security-awareness"
+phase:
+  - "govern"
+  - "protect"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/security-awareness"
+  - "security/priority/p1"
+  - "security/phase/govern"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/01-governance-and-policy]]"
+  - "[[docs/06-application-and-api-security]]"
+  - "[[docs/08-devsecops-and-supply-chain]]"
+  - "[[docs/10-monitoring-and-security-operations]]"
+  - "[[docs/11-incident-response]]"
+  - "[[docs/25-email-and-collaboration-security]]"
+  - "[[docs/29-physical-and-media-security]]"
+---
 # 30 - 安全意识、Security Champion 与安全人才体系
 
 > 安全能力不能只依赖安全团队。本章建立全员安全意识、角色化培训、Security Champion 和关键岗位能力模型。
@@ -278,3 +306,16 @@ Champion 不替代 Security Team，也不承担所有风险责任。
 ## 26. 关联控制
 
 SEC-AWR-001、SEC-AWR-002、SEC-EML-*、SEC-APP-*、SEC-IR-*。
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/01-governance-and-policy|01 安全治理与制度]]
+- **下游知识**：[[docs/06-application-and-api-security|06 应用与 API 安全]] · [[docs/08-devsecops-and-supply-chain|08 DevSecOps 与供应链安全]] · [[docs/10-monitoring-and-security-operations|10 日志监控与安全运营]] · [[docs/11-incident-response|11 安全事件与应急响应]] · [[docs/25-email-and-collaboration-security|25 邮件与协作平台安全]]
+- **横向关联**：[[docs/29-physical-and-media-security|29 物理、环境与介质安全]]
+
+<!-- obsidian-relations:end -->

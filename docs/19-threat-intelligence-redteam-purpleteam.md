@@ -1,3 +1,26 @@
+---
+aliases:
+  - "威胁情报、Red Team 与 Purple Team"
+type: "standard"
+domain: "threat-informed-defense"
+phase:
+  - "detect"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/threat-informed-defense"
+  - "security/priority/p1"
+  - "security/phase/detect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/09-vulnerability-and-penetration-testing]]"
+  - "[[docs/10-monitoring-and-security-operations]]"
+  - "[[docs/11-incident-response]]"
+  - "[[docs/14-security-baselines-and-checklists]]"
+---
 # 19 - 威胁情报、Red Team 与 Purple Team
 
 > 本文档用于将安全运营从“有规则、有告警”进一步升级为“知道主要对手如何攻击，并能持续验证公司的检测与防御是否真的有效”。
@@ -463,3 +486,16 @@ IOC：
 | 版本 | 日期 | 说明 |
 |---|---|---|
 | V0.1 | 2026-09 | 建立威胁情报、Red Team、Purple Team 与持续检测验证框架 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/09-vulnerability-and-penetration-testing|09 漏洞管理与授权渗透测试]] · [[docs/10-monitoring-and-security-operations|10 日志监控与安全运营]]
+- **下游知识**：[[docs/11-incident-response|11 安全事件与应急响应]]
+- **横向关联**：[[docs/14-security-baselines-and-checklists|14 安全基线与检查清单]]
+
+<!-- obsidian-relations:end -->

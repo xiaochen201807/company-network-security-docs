@@ -1,3 +1,21 @@
+---
+aliases:
+  - "Information Security Policy"
+type: "policy"
+domain: "governance"
+phase:
+  - "govern"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/policy"
+  - "security/domain/governance"
+  - "security/priority/p1"
+  - "security/phase/govern"
+parent:
+  - "[[docs/knowledge-map]]"
+---
 # Information Security Policy
 
 | Metadata | Value |

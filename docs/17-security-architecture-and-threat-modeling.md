@@ -1,3 +1,31 @@
+---
+aliases:
+  - "安全架构评审与 Threat Modeling"
+type: "standard"
+domain: "security-architecture"
+phase:
+  - "identify"
+  - "protect"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/security-architecture"
+  - "security/priority/p1"
+  - "security/phase/identify"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/02-assets-and-network-architecture]]"
+  - "[[docs/06-application-and-api-security]]"
+  - "[[docs/08-devsecops-and-supply-chain]]"
+  - "[[docs/18-product-security-and-secure-by-default]]"
+  - "[[docs/22-security-engineering-platform]]"
+  - "[[docs/23-ai-llm-agent-security]]"
+  - "[[docs/24-mobile-application-security]]"
+---
 # 17 - 安全架构评审与 Threat Modeling
 
 > 本文档用于将安全设计评审从“安全人员经验检查”升级为统一、可追踪的工程流程。参考 Microsoft SDL Threat Modeling、STRIDE 等公开实践，核心思想是从“系统应该如何工作”进一步分析“系统可能如何被滥用”。
@@ -455,3 +483,16 @@ SHOULD 建立公司常见 Threat 模板：
 | 版本 | 日期 | 说明 |
 |---|---|---|
 | V0.1 | 2026-09 | 建立安全架构评审与 Threat Modeling 流程 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/02-assets-and-network-architecture|02 资产与网络架构]]
+- **下游知识**：[[docs/06-application-and-api-security|06 应用与 API 安全]] · [[docs/08-devsecops-and-supply-chain|08 DevSecOps 与供应链安全]] · [[docs/18-product-security-and-secure-by-default|18 Product Security 与 Secure by Default]] · [[docs/22-security-engineering-platform|22 Security Engineering Platform]] · [[docs/23-ai-llm-agent-security|23 AI、LLM 与 Agent 安全]] · [[docs/24-mobile-application-security|24 移动应用安全]]
+- **横向关联**：无
+
+<!-- obsidian-relations:end -->

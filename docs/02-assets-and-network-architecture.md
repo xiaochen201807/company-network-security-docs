@@ -1,3 +1,31 @@
+---
+aliases:
+  - "资产与网络架构"
+type: "standard"
+domain: "asset"
+phase:
+  - "identify"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/asset"
+  - "security/priority/p0"
+  - "security/phase/identify"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/00-security-overview]]"
+  - "[[docs/01-governance-and-policy]]"
+  - "[[docs/03-network-and-perimeter-security]]"
+  - "[[docs/04-identity-and-access-control]]"
+  - "[[docs/07-data-security]]"
+  - "[[docs/09-vulnerability-and-penetration-testing]]"
+  - "[[docs/10-monitoring-and-security-operations]]"
+  - "[[docs/16-cloud-and-workload-security]]"
+  - "[[docs/17-security-architecture-and-threat-modeling]]"
+---
 # 02 - 资产与网络架构
 
 > 安全工作的第一步是知道：有什么资产、在哪里、谁负责、承载什么业务和数据、对谁暴露。
@@ -199,3 +227,16 @@ User → WAF/LB → Web/API → Application
 |---|---|---|
 | V0.1 | 2026-09 | 建立资产框架 |
 | V0.2 | 2026-09 | 完善资产生命周期、暴露面、网络架构和数据流管理 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/00-security-overview|00 公司安全体系总览]] · [[docs/01-governance-and-policy|01 安全治理与制度]]
+- **下游知识**：[[docs/03-network-and-perimeter-security|03 网络与边界安全]] · [[docs/04-identity-and-access-control|04 身份与访问控制]] · [[docs/07-data-security|07 数据安全]] · [[docs/09-vulnerability-and-penetration-testing|09 漏洞管理与授权渗透测试]] · [[docs/10-monitoring-and-security-operations|10 日志监控与安全运营]] · [[docs/16-cloud-and-workload-security|16 云与 Workload 安全]] · [[docs/17-security-architecture-and-threat-modeling|17 安全架构评审与 Threat Modeling]]
+- **横向关联**：无
+
+<!-- obsidian-relations:end -->

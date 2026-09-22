@@ -1,3 +1,24 @@
+---
+aliases:
+  - "Security RACI"
+type: "matrix"
+domain: "governance"
+phase:
+  - "govern"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/matrix"
+  - "security/domain/governance"
+  - "security/priority/p0"
+  - "security/phase/govern"
+parent:
+  - "[[docs/governance/README]]"
+related:
+  - "[[docs/governance/security-control-catalog]]"
+  - "[[docs/01-governance-and-policy]]"
+---
 # Security RACI
 
 > R = Responsible；A = Accountable；C = Consulted；I = Informed。

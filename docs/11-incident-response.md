@@ -1,3 +1,29 @@
+---
+aliases:
+  - "安全事件与应急响应"
+type: "standard"
+domain: "incident-response"
+phase:
+  - "respond"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/incident-response"
+  - "security/priority/p1"
+  - "security/phase/respond"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/09-vulnerability-and-penetration-testing]]"
+  - "[[docs/10-monitoring-and-security-operations]]"
+  - "[[docs/12-backup-dr-and-reliability]]"
+  - "[[docs/28-business-impact-and-continuity]]"
+  - "[[docs/19-threat-intelligence-redteam-purpleteam]]"
+  - "[[docs/20-psirt-and-vulnerability-disclosure]]"
+  - "[[docs/25-email-and-collaboration-security]]"
+---
 # 11 - 安全事件与应急响应
 
 > 本文档用于建立公司安全事件的识别、分级、通报、遏制、取证、清除、恢复和复盘机制。事件响应参考 NIST SP 800-61 Rev.3 的思想：事件响应不是孤立流程，而应嵌入整体网络安全风险管理、检测、响应和恢复活动。
@@ -509,3 +535,16 @@ SOAR、自动遏制、Purple Team 验证、事件与风险/资产平台联动。
 |---|---|---|
 | V0.1 | 2026-09 | 建立事件响应框架 |
 | V0.2 | 2026-09 | 完善分级、角色、取证、恢复、复盘、演练和供应链事件响应 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/09-vulnerability-and-penetration-testing|09 漏洞管理与授权渗透测试]] · [[docs/10-monitoring-and-security-operations|10 日志监控与安全运营]]
+- **下游知识**：[[docs/12-backup-dr-and-reliability|12 备份容灾与稳定性协同]] · [[docs/28-business-impact-and-continuity|28 BIA 与业务连续性]]
+- **横向关联**：[[docs/19-threat-intelligence-redteam-purpleteam|19 威胁情报、Red Team 与 Purple Team]] · [[docs/20-psirt-and-vulnerability-disclosure|20 PSIRT 与漏洞披露]] · [[docs/25-email-and-collaboration-security|25 邮件与协作平台安全]]
+
+<!-- obsidian-relations:end -->

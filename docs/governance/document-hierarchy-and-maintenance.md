@@ -1,3 +1,24 @@
+---
+aliases:
+  - "安全文档层级与维护规则"
+type: "standard"
+domain: "governance"
+phase:
+  - "govern"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/governance"
+  - "security/priority/p1"
+  - "security/phase/govern"
+parent:
+  - "[[docs/governance/README]]"
+related:
+  - "[[docs/knowledge-map]]"
+  - "[[docs/01-governance-and-policy]]"
+---
 # 文档层级与维护规则
 
 > 解决当前文档全部平铺、Standard/SOP/模板混在一起的问题。

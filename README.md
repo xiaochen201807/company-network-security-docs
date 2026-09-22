@@ -4,6 +4,24 @@
 >
 > 当前阶段统一采用 **Markdown（.md）** 编写，后续可按需要生成 PDF、Word、Wiki 或内部知识库版本。
 
+> **文档较多时不要按 00～30 顺序逐篇阅读。**
+> 
+> 优先从 👉 **[公司安全知识图谱](docs/knowledge-map.md)** 进入，可按安全域、角色、典型场景和建设阶段快速找到相关文档。
+
+~~~text
+遇到问题
+   ↓
+知识图谱
+   ↓
+找到安全域
+   ↓
+Standard / SOP / Playbook / Template
+   ↓
+Control ID
+   ↓
+Evidence
+~~~
+
 ## 1. 建设目标
 
 本项目希望形成一套可长期维护、可落地检查、可审计、可用于培训和应急处置的企业安全知识体系，覆盖：
@@ -38,6 +56,20 @@
 - BIA 与业务连续性
 - 物理、环境与介质安全
 - 安全意识与人才体系
+
+## 1.1 推荐阅读入口
+
+| 我现在要做什么 | 从哪里进入 |
+|---|---|
+| 快速理解整个安全体系 | [安全知识图谱](docs/knowledge-map.md) |
+| 用 Obsidian 打开并使用图谱 | [Obsidian 使用指南](docs/obsidian-usage.md) |
+| 看公司安全总体框架 | [00 安全体系总览](docs/00-security-overview.md) |
+| 看安全建设现状和差距 | [Current / Target Profile](docs/governance/security-current-target-profile.md) |
+| 查某项安全要求 | [Security Control Catalog](docs/governance/security-control-catalog.md) |
+| 查谁负责 | [Security RACI](docs/governance/security-raci.md) |
+| 查公司真实平台/SLA/RTO 等参数 | [公司安全参数登记表](docs/governance/company-security-parameters-register.md) |
+| 发生安全事件需要立即执行 | [Playbooks](docs/playbooks/) |
+| 需要具体表单/检查表 | [Templates](docs/templates/) |
 
 ## 2. 文档导航
 

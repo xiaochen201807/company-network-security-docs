@@ -1,3 +1,21 @@
+---
+aliases:
+  - "员工离职与转岗权限回收 SOP"
+type: "procedure"
+domain: "operations"
+phase:
+  - "respond"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/procedure"
+  - "security/domain/operations"
+  - "security/priority/p1"
+  - "security/phase/respond"
+parent:
+  - "[[docs/knowledge-map]]"
+---
 # 员工离职与转岗权限回收 SOP
 
 | Metadata | Value |

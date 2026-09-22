@@ -1,3 +1,21 @@
+---
+aliases:
+  - "08 - DevSecOps 与软件供应链安全"
+type: "archive"
+domain: "devsecops"
+phase:
+  - "protect"
+priority: "P0"
+status: "archived"
+tags:
+  - "security"
+  - "security/type/archive"
+  - "security/domain/devsecops"
+  - "security/priority/p0"
+  - "security/phase/protect"
+parent:
+  - "[[docs/08-devsecops-and-supply-chain]]"
+---
 # 08 - DevSecOps 与软件供应链安全
 
 > 本文档用于规范公司从代码提交、依赖获取、持续集成、静态扫描、依赖分析、制品生成到发布部署全过程中的安全要求。

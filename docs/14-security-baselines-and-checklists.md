@@ -1,3 +1,28 @@
+---
+aliases:
+  - "安全基线与检查清单"
+type: "standard"
+domain: "security-baseline"
+phase:
+  - "protect"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/security-baseline"
+  - "security/priority/p0"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/03-network-and-perimeter-security]]"
+  - "[[docs/05-endpoint-and-server-security]]"
+  - "[[docs/08-devsecops-and-supply-chain]]"
+  - "[[docs/09-vulnerability-and-penetration-testing]]"
+  - "[[docs/12-backup-dr-and-reliability]]"
+  - "[[docs/16-cloud-and-workload-security]]"
+---
 # 14 - 安全基线与检查清单
 
 > 本文档将前述安全要求转化为可直接执行的检查清单。基线用于发现偏差，不应在不了解业务影响的情况下自动修改生产配置。具体参数值应结合产品版本、公司架构和性能要求确认。
@@ -441,3 +466,16 @@ SHOULD 逐步通过配置管理、API、脚本、CSPM/KSPM、主机基线工具�
 |---|---|---|
 | V0.1 | 2026-09 | 建立日常检查框架 |
 | V0.2 | 2026-09 | 补充 Windows/Linux 及主要中间件、研发平台、容器、网络设备可执行基线 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/03-network-and-perimeter-security|03 网络与边界安全]] · [[docs/05-endpoint-and-server-security|05 终端与服务器安全]] · [[docs/08-devsecops-and-supply-chain|08 DevSecOps 与供应链安全]]
+- **下游知识**：[[docs/09-vulnerability-and-penetration-testing|09 漏洞管理与授权渗透测试]]
+- **横向关联**：[[docs/12-backup-dr-and-reliability|12 备份容灾与稳定性协同]] · [[docs/16-cloud-and-workload-security|16 云与 Workload 安全]]
+
+<!-- obsidian-relations:end -->

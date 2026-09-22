@@ -1,3 +1,29 @@
+---
+aliases:
+  - "Product Security 与 Secure by Default"
+type: "standard"
+domain: "product-security"
+phase:
+  - "protect"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/product-security"
+  - "security/priority/p1"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/06-application-and-api-security]]"
+  - "[[docs/08-devsecops-and-supply-chain]]"
+  - "[[docs/17-security-architecture-and-threat-modeling]]"
+  - "[[docs/20-psirt-and-vulnerability-disclosure]]"
+  - "[[docs/22-security-engineering-platform]]"
+  - "[[docs/23-ai-llm-agent-security]]"
+  - "[[docs/24-mobile-application-security]]"
+---
 # 18 - Product Security 与 Secure by Default
 
 > 本文档用于把安全责任从“用户自己加固”前移到产品设计、默认配置、发布、维护和生命周期管理。目标是让产品最容易使用的方式同时也是更安全的方式。
@@ -451,3 +477,16 @@ EOL 后原则上不继续承诺常规安全修复，除非另有合同约定。
 | 版本 | 日期 | 说明 |
 |---|---|---|
 | V0.1 | 2026-09 | 建立 Product Security 与 Secure by Default 规范 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/06-application-and-api-security|06 应用与 API 安全]] · [[docs/08-devsecops-and-supply-chain|08 DevSecOps 与供应链安全]] · [[docs/17-security-architecture-and-threat-modeling|17 安全架构评审与 Threat Modeling]]
+- **下游知识**：[[docs/20-psirt-and-vulnerability-disclosure|20 PSIRT 与漏洞披露]]
+- **横向关联**：[[docs/22-security-engineering-platform|22 Security Engineering Platform]] · [[docs/23-ai-llm-agent-security|23 AI、LLM 与 Agent 安全]] · [[docs/24-mobile-application-security|24 移动应用安全]]
+
+<!-- obsidian-relations:end -->

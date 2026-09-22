@@ -29,6 +29,7 @@ BACKTICK_FENCE = chr(96) * 3
 CONTROL_ID_RE = re.compile(r"\bSEC-[A-Z][A-Z0-9]{1,7}-\d{3}\b")
 CORE_FILE_RE = re.compile(r"^(\d{2})-.*\.md$")
 MD_LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+WIKI_LINK_RE = re.compile(r"\[\[([^\]]+)\]\]")
 H1_RE = re.compile(r"^#\s+\S")
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
 UNCHECKED_RE = re.compile(r"^- \[ \]\s+", re.M)
@@ -42,6 +43,11 @@ REQUIRED_GOVERNANCE = (
     "docs/governance/security-raci.md",
     "docs/governance/company-security-parameters-register.md",
     "docs/governance/document-hierarchy-and-maintenance.md",
+)
+
+REQUIRED_NAVIGATION = (
+    "docs/knowledge-map.md",
+    "docs/obsidian-usage.md",
 )
 
 REQUIRED_HIERARCHY_ARTIFACTS = (
@@ -192,9 +198,12 @@ class QualityChecker:
 
         self.check_markdown_structure(files)
         self.check_internal_links(files)
+        self.check_wikilinks(files)
+        self.check_obsidian_metadata(files)
         self.check_core_docs()
         self.check_required_artifacts()
         self.check_readme_navigation()
+        self.check_knowledge_map()
         self.check_document_size(files)
         self.check_split_architecture()
         self.check_metadata()
@@ -316,6 +325,159 @@ class QualityChecker:
                     )
         self.metrics["broken_links"] = broken
 
+    def resolve_wikilink(self, source: Path, target: str) -> Optional[Path]:
+        target = target.split("|", 1)[0].split("#", 1)[0].strip()
+        if not target:
+            return None
+        if target.startswith(("http://", "https://", "mailto:", "obsidian://")):
+            return None
+
+        raw = Path(target)
+        candidates = []
+        if raw.suffix:
+            candidates.extend([self.root / raw, source.parent / raw])
+        else:
+            candidates.extend([
+                self.root / (target + ".md"),
+                source.parent / (target + ".md"),
+            ])
+
+        for candidate in candidates:
+            if candidate.exists():
+                return candidate.resolve()
+
+        if "/" not in target:
+            matches = list(self.root.rglob(target + ".md"))
+            if len(matches) == 1:
+                return matches[0].resolve()
+        return Path("__MISSING__")
+
+    def check_wikilinks(self, files: Iterable[Path]) -> None:
+        broken = 0
+        total = 0
+        for path in files:
+            text = self.read(path)
+            for match in WIKI_LINK_RE.finditer(text):
+                target = match.group(1)
+                resolved = self.resolve_wikilink(path, target)
+                if resolved is None:
+                    continue
+                total += 1
+                if resolved == Path("__MISSING__"):
+                    broken += 1
+                    line = text[: match.start()].count("\n") + 1
+                    self.add(
+                        "ERROR",
+                        "obsidian.wikilink_broken",
+                        f"Broken Obsidian WikiLink: [[{target}]]",
+                        path,
+                        line,
+                    )
+
+        self.metrics["wikilinks"] = {
+            "total": total,
+            "broken": broken,
+        }
+
+    @staticmethod
+    def extract_frontmatter(text: str) -> Optional[str]:
+        if not text.startswith("---\n"):
+            return None
+        end = text.find("\n---\n", 4)
+        if end == -1:
+            return None
+        return text[4:end]
+
+    def check_obsidian_metadata(self, files: Iterable[Path]) -> None:
+        docs_files = [p for p in files if self.docs_dir in p.resolve().parents]
+        required_keys = {
+            "aliases",
+            "type",
+            "domain",
+            "phase",
+            "priority",
+            "status",
+            "tags",
+        }
+
+        with_frontmatter = 0
+        property_problems = 0
+        core_relation_blocks = 0
+
+        for path in docs_files:
+            text = self.read(path)
+            frontmatter = self.extract_frontmatter(text)
+            is_core = bool(CORE_FILE_RE.match(path.name)) and path.parent.resolve() == self.docs_dir.resolve()
+
+            if frontmatter is None:
+                severity = "ERROR" if is_core else "WARNING"
+                self.add(
+                    severity,
+                    "obsidian.frontmatter_missing",
+                    "Obsidian YAML Properties frontmatter is missing.",
+                    path,
+                )
+                property_problems += 1
+                continue
+
+            with_frontmatter += 1
+            keys = {
+                match.group(1)
+                for match in re.finditer(r"^([A-Za-z][A-Za-z0-9_-]*):", frontmatter, re.M)
+            }
+            missing = sorted(required_keys - keys)
+            if missing:
+                severity = "ERROR" if is_core else "WARNING"
+                self.add(
+                    severity,
+                    "obsidian.property_missing",
+                    "Missing Obsidian Properties: " + ", ".join(missing),
+                    path,
+                )
+                property_problems += 1
+
+            if "security" not in frontmatter:
+                self.add(
+                    "WARNING",
+                    "obsidian.security_tag",
+                    "Frontmatter does not include the base security tag.",
+                    path,
+                )
+                property_problems += 1
+
+            if is_core:
+                if "parent:" not in frontmatter or "[[docs/knowledge-map]]" not in frontmatter:
+                    self.add(
+                        "ERROR",
+                        "obsidian.parent",
+                        "Core document must point to docs/knowledge-map in parent property.",
+                        path,
+                    )
+                    property_problems += 1
+
+                start_count = text.count("<!-- obsidian-relations:start -->")
+                end_count = text.count("<!-- obsidian-relations:end -->")
+                if start_count == 1 and end_count == 1:
+                    core_relation_blocks += 1
+                else:
+                    self.add(
+                        "ERROR",
+                        "obsidian.relation_block",
+                        f"Core document relation block markers invalid: start={start_count}, end={end_count}.",
+                        path,
+                    )
+
+        self.metrics["obsidian"] = {
+            "docs_files": len(docs_files),
+            "frontmatter_files": with_frontmatter,
+            "frontmatter_coverage_percent": round(
+                with_frontmatter / len(docs_files) * 100, 1
+            ) if docs_files else 0.0,
+            "property_problems": property_problems,
+            "core_relation_blocks": core_relation_blocks,
+            "core_relation_expected": len(list(EXPECTED_CORE_RANGE)),
+        }
+
     def check_core_docs(self) -> None:
         by_num: dict[int, list[Path]] = defaultdict(list)
         for path in self.docs_dir.glob("*.md"):
@@ -347,6 +509,7 @@ class QualityChecker:
 
     def check_required_artifacts(self) -> None:
         groups = {
+            "navigation": REQUIRED_NAVIGATION,
             "governance": REQUIRED_GOVERNANCE,
             "hierarchy": REQUIRED_HIERARCHY_ARTIFACTS,
             "templates": REQUIRED_TEMPLATES,
@@ -395,6 +558,58 @@ class QualityChecker:
                     self.readme,
                 )
         self.metrics["readme_missing_core_links"] = missing_core
+
+        for relpath in REQUIRED_NAVIGATION:
+            if relpath not in text:
+                self.add(
+                    "ERROR",
+                    "readme.knowledge_map",
+                    f"Knowledge map is not linked from README: {relpath}",
+                    self.readme,
+                )
+
+    def check_knowledge_map(self) -> None:
+        path = self.root / "docs/knowledge-map.md"
+        if not path.exists():
+            self.add(
+                "ERROR",
+                "knowledge_map.missing",
+                "Security knowledge map is missing.",
+                path,
+            )
+            return
+
+        text = self.read(path)
+        mermaid_count = text.count("~~~mermaid")
+        if mermaid_count < 3:
+            self.add(
+                "WARNING",
+                "knowledge_map.visual_depth",
+                f"Knowledge map contains only {mermaid_count} Mermaid diagrams; expected at least 3.",
+                path,
+            )
+
+        missing_core = []
+        for num in EXPECTED_CORE_RANGE:
+            candidates = sorted(self.docs_dir.glob(f"{num:02d}-*.md"))
+            if not candidates:
+                continue
+            relative_from_map = candidates[0].name
+            if relative_from_map not in text:
+                missing_core.append(relative_from_map)
+                self.add(
+                    "WARNING",
+                    "knowledge_map.coverage",
+                    f"Core document is not discoverable from knowledge map: {relative_from_map}",
+                    path,
+                )
+
+        self.metrics["knowledge_map"] = {
+            "mermaid_diagrams": mermaid_count,
+            "core_links_expected": len(list(EXPECTED_CORE_RANGE)),
+            "core_links_present": len(list(EXPECTED_CORE_RANGE)) - len(missing_core),
+            "missing_core_links": missing_core,
+        }
 
     def check_document_size(self, files: Iterable[Path]) -> None:
         oversized = []
@@ -762,6 +977,11 @@ class QualityChecker:
                 if candidate in all_files:
                     referenced.add(candidate)
 
+            for match in WIKI_LINK_RE.finditer(text):
+                resolved = self.resolve_wikilink(path, match.group(1))
+                if resolved is not None and resolved in all_files:
+                    referenced.add(resolved)
+
         orphans = []
         for resolved, path in all_files.items():
             if resolved == self.readme.resolve() or self.is_archive(path):
@@ -784,8 +1004,25 @@ class QualityChecker:
 
         categories = {
             "structure_and_links": (
-                ["markdown.h1", "markdown.fence", "link.broken", "core.missing", "core.duplicate"],
+                [
+                    "markdown.h1",
+                    "markdown.fence",
+                    "link.broken",
+                    "core.missing",
+                    "core.duplicate",
+                    "obsidian.wikilink_broken",
+                ],
                 ["markdown.heading_level"],
+            ),
+            "obsidian_graph": (
+                [
+                    "obsidian.frontmatter_missing",
+                    "obsidian.property_missing",
+                    "obsidian.parent",
+                    "obsidian.relation_block",
+                    "readme.knowledge_map",
+                ],
+                ["obsidian.security_tag", "knowledge_map.visual_depth", "knowledge_map.coverage"],
             ),
             "required_artifacts": (
                 ["required.governance", "required.hierarchy", "required.templates", "split.subdocs"],
@@ -821,6 +1058,8 @@ def render_markdown(report: dict[str, object]) -> str:
     profile = metrics.get("current_target_profile", {})
     params = metrics.get("company_parameters", {})
     controls = metrics.get("controls", {})
+    obsidian = metrics.get("obsidian", {})
+    wikilinks = metrics.get("wikilinks", {})
 
     lines = [
         "# Security Documentation Quality Report",
@@ -853,7 +1092,9 @@ def render_markdown(report: dict[str, object]) -> str:
     lines.extend(
         [
             f"- Broken links: **{metrics.get('broken_links', 0)}**",
-            f"- Oversized active docs: **{len(metrics.get('oversized_active_docs', []))}**",
+            f"- Oversized active docs: **{len(metrics.get('oversized_active_docs', []))}**",            f"- Obsidian Properties coverage: **{obsidian.get('frontmatter_files', 0)}/{obsidian.get('docs_files', 0)}**",
+            f"- Core relation blocks: **{obsidian.get('core_relation_blocks', 0)}/{obsidian.get('core_relation_expected', 0)}**",
+            f"- Obsidian WikiLinks: **{wikilinks.get('total', 0)}**, broken: **{wikilinks.get('broken', 0)}**",
             "",
             "## 3. Control Catalog",
             "",

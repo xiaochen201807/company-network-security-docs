@@ -1,3 +1,21 @@
+---
+aliases:
+  - "Container、IaC 与制品 Standard"
+type: "standard"
+domain: "devsecops"
+phase:
+  - "protect"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/devsecops"
+  - "security/priority/p0"
+  - "security/phase/protect"
+parent:
+  - "[[docs/08-devsecops-and-supply-chain]]"
+---
 # Container、IaC 与制品 Standard
 
 ## Container

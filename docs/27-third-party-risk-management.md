@@ -1,3 +1,28 @@
+---
+aliases:
+  - "第三方风险管理"
+type: "standard"
+domain: "third-party-risk"
+phase:
+  - "govern"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/third-party-risk"
+  - "security/priority/p1"
+  - "security/phase/govern"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/01-governance-and-policy]]"
+  - "[[docs/07-data-security]]"
+  - "[[docs/26-privacy-and-personal-data-protection]]"
+  - "[[docs/28-business-impact-and-continuity]]"
+  - "[[docs/04-identity-and-access-control]]"
+  - "[[docs/12-backup-dr-and-reliability]]"
+---
 # 27 - 第三方风险管理（TPRM）
 
 > 本文档统一管理供应商、SaaS、外包开发、MSP、云服务、数据处理方和具有公司系统访问权限的第三方。
@@ -295,3 +320,16 @@ Tier 1/2 定期关注：
 ## 28. 关联控制
 
 SEC-TPR-001、SEC-TPR-002、SEC-IAM-*、SEC-DAT-*、SEC-BCM-*。
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/01-governance-and-policy|01 安全治理与制度]]
+- **下游知识**：[[docs/07-data-security|07 数据安全]] · [[docs/26-privacy-and-personal-data-protection|26 隐私与个人信息保护]] · [[docs/28-business-impact-and-continuity|28 BIA 与业务连续性]]
+- **横向关联**：[[docs/04-identity-and-access-control|04 身份与访问控制]] · [[docs/12-backup-dr-and-reliability|12 备份容灾与稳定性协同]]
+
+<!-- obsidian-relations:end -->

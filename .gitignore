@@ -12,6 +12,9 @@ venv/
 .idea/
 .vscode/
 
+# Obsidian local workspace / personal preferences
+.obsidian/
+
 # Generated quality reports
 reports/security-doc-quality-report.md
 reports/security-doc-quality-report.json

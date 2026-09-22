@@ -1,3 +1,26 @@
+---
+aliases:
+  - "物理、环境与介质安全"
+type: "standard"
+domain: "physical-security"
+phase:
+  - "protect"
+priority: "P2"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/physical-security"
+  - "security/priority/p2"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/05-endpoint-and-server-security]]"
+  - "[[docs/28-business-impact-and-continuity]]"
+  - "[[docs/12-backup-dr-and-reliability]]"
+  - "[[docs/30-security-awareness-and-workforce]]"
+---
 # 29 - 物理、环境与介质安全
 
 > 本文档定义办公场地、机房、设备、可移动介质和资产报废的最低安全要求。若公司使用第三方 IDC/云服务，也应明确供应商责任和公司可获得的审计证据。
@@ -234,3 +257,16 @@
 ## 25. 关联控制
 
 SEC-PHY-001、SEC-PHY-002、SEC-END-*、SEC-DAT-*。
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/05-endpoint-and-server-security|05 终端与服务器安全]] · [[docs/28-business-impact-and-continuity|28 BIA 与业务连续性]]
+- **下游知识**：无
+- **横向关联**：[[docs/12-backup-dr-and-reliability|12 备份容灾与稳定性协同]] · [[docs/30-security-awareness-and-workforce|30 安全意识、Security Champion 与安全人才体系]]
+
+<!-- obsidian-relations:end -->

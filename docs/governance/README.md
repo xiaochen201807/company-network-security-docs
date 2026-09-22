@@ -1,6 +1,32 @@
+---
+aliases:
+  - "Security Governance V2.0"
+type: "moc"
+domain: "governance"
+phase:
+  - "govern"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/moc"
+  - "security/domain/governance"
+  - "security/priority/p0"
+  - "security/phase/govern"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/governance/security-control-catalog]]"
+  - "[[docs/governance/security-current-target-profile]]"
+  - "[[docs/governance/security-raci]]"
+  - "[[docs/governance/company-security-parameters-register]]"
+  - "[[docs/governance/document-hierarchy-and-maintenance]]"
+---
 # Security Governance V2.0
 
 > 本目录用于把 00～30 的安全知识与规范转换为公司可执行的 Security Program。
+
+> 整个安全体系的关系导航见 **[公司安全知识图谱](../knowledge-map.md)**。
 
 ## 1. 四个核心治理工件
 

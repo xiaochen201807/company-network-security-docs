@@ -1,3 +1,27 @@
+---
+aliases:
+  - "移动应用安全"
+type: "standard"
+domain: "mobile-security"
+phase:
+  - "protect"
+priority: "P2"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/mobile-security"
+  - "security/priority/p2"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/06-application-and-api-security]]"
+  - "[[docs/17-security-architecture-and-threat-modeling]]"
+  - "[[docs/18-product-security-and-secure-by-default]]"
+  - "[[docs/21-cryptography-pki-kms-and-secrets]]"
+  - "[[docs/22-security-engineering-platform]]"
+---
 # 24 - 移动应用安全
 
 > 本文档用于规范 Android、iOS 和相关移动端 SDK 的安全开发、测试和发布。参考 OWASP MASVS/MAS 项目的控制分类，包括 Storage、Crypto、Auth、Network、Platform、Code、Resilience 和 Privacy。
@@ -466,3 +490,16 @@ Android/iOS 发布签名 Key：
 | 版本 | 日期 | 说明 |
 |---|---|---|
 | V0.1 | 2026-09 | 建立移动应用安全规范 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/06-application-and-api-security|06 应用与 API 安全]] · [[docs/17-security-architecture-and-threat-modeling|17 安全架构评审与 Threat Modeling]] · [[docs/18-product-security-and-secure-by-default|18 Product Security 与 Secure by Default]] · [[docs/21-cryptography-pki-kms-and-secrets|21 密码学、PKI、KMS 与 Secret 治理]] · [[docs/22-security-engineering-platform|22 Security Engineering Platform]]
+- **下游知识**：无
+- **横向关联**：无
+
+<!-- obsidian-relations:end -->

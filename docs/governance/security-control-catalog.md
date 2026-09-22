@@ -1,3 +1,25 @@
+---
+aliases:
+  - "Security Control Catalog"
+type: "catalog"
+domain: "governance"
+phase:
+  - "govern"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/catalog"
+  - "security/domain/governance"
+  - "security/priority/p0"
+  - "security/phase/govern"
+parent:
+  - "[[docs/governance/README]]"
+related:
+  - "[[docs/governance/security-current-target-profile]]"
+  - "[[docs/governance/security-raci]]"
+  - "[[docs/13-compliance-and-audit]]"
+---
 # Security Control Catalog
 
 > 本文档是公司安全控制的统一目录。后续 Policy、Standard、Baseline、Checklist、审计和自动化检查应尽量引用 Control ID，减少重复和冲突。

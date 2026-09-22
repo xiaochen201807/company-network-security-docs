@@ -1,3 +1,32 @@
+---
+aliases:
+  - "应用与 API 安全"
+type: "standard"
+domain: "application-security"
+phase:
+  - "protect"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/application-security"
+  - "security/priority/p0"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/04-identity-and-access-control]]"
+  - "[[docs/17-security-architecture-and-threat-modeling]]"
+  - "[[docs/08-devsecops-and-supply-chain]]"
+  - "[[docs/09-vulnerability-and-penetration-testing]]"
+  - "[[docs/18-product-security-and-secure-by-default]]"
+  - "[[docs/22-security-engineering-platform]]"
+  - "[[docs/23-ai-llm-agent-security]]"
+  - "[[docs/24-mobile-application-security]]"
+  - "[[docs/07-data-security]]"
+  - "[[docs/21-cryptography-pki-kms-and-secrets]]"
+---
 # 06 - 应用与 API 安全
 
 > 本文档定义 Web、API、Java/Spring/Spring Boot 应用从需求、设计、编码、测试、发布到运行阶段的安全要求。OWASP Top 10:2025 用于风险意识与分类；需要可验证要求时，优先参考 OWASP ASVS 5.0.0 并结合公司实际裁剪。
@@ -331,3 +360,16 @@ ASVS 检查表、威胁建模、API 安全测试、Rate Limit、统一安全组�
 |---|---|---|
 | V0.1 | 2026-09 | 建立应用安全框架 |
 | V0.2 | 2026-09 | 完善 Java/Spring、API、认证授权、输入输出、业务逻辑、异常和 Gate 要求 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/04-identity-and-access-control|04 身份与访问控制]] · [[docs/17-security-architecture-and-threat-modeling|17 安全架构评审与 Threat Modeling]]
+- **下游知识**：[[docs/08-devsecops-and-supply-chain|08 DevSecOps 与供应链安全]] · [[docs/09-vulnerability-and-penetration-testing|09 漏洞管理与授权渗透测试]] · [[docs/18-product-security-and-secure-by-default|18 Product Security 与 Secure by Default]] · [[docs/22-security-engineering-platform|22 Security Engineering Platform]] · [[docs/23-ai-llm-agent-security|23 AI、LLM 与 Agent 安全]] · [[docs/24-mobile-application-security|24 移动应用安全]]
+- **横向关联**：[[docs/07-data-security|07 数据安全]] · [[docs/21-cryptography-pki-kms-and-secrets|21 密码学、PKI、KMS 与 Secret 治理]]
+
+<!-- obsidian-relations:end -->

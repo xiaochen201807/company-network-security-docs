@@ -1,3 +1,31 @@
+---
+aliases:
+  - "身份与访问控制"
+type: "standard"
+domain: "identity"
+phase:
+  - "protect"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/identity"
+  - "security/priority/p0"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/01-governance-and-policy]]"
+  - "[[docs/02-assets-and-network-architecture]]"
+  - "[[docs/03-network-and-perimeter-security]]"
+  - "[[docs/05-endpoint-and-server-security]]"
+  - "[[docs/06-application-and-api-security]]"
+  - "[[docs/15-zero-trust-and-device-trust]]"
+  - "[[docs/21-cryptography-pki-kms-and-secrets]]"
+  - "[[docs/25-email-and-collaboration-security]]"
+  - "[[docs/27-third-party-risk-management]]"
+---
 # 04 - 身份与访问控制
 
 > 本文档用于规范人员账号、服务账号、管理员权限、MFA、凭据、访问审批、权限复核和账号生命周期，确保“正确的人，在正确的时间，以正确的权限，访问正确的资源”。
@@ -424,3 +452,16 @@ PAM、JIT、行为分析、自动化权限治理。
 |---|---|---|
 | V0.1 | 2026-09 | 建立 IAM 基本要求 |
 | V0.2 | 2026-09 | 完善生命周期、MFA、服务账号、Token、特权权限和复核机制 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/01-governance-and-policy|01 安全治理与制度]] · [[docs/02-assets-and-network-architecture|02 资产与网络架构]]
+- **下游知识**：[[docs/03-network-and-perimeter-security|03 网络与边界安全]] · [[docs/05-endpoint-and-server-security|05 终端与服务器安全]] · [[docs/06-application-and-api-security|06 应用与 API 安全]] · [[docs/15-zero-trust-and-device-trust|15 Zero Trust 与设备可信]] · [[docs/21-cryptography-pki-kms-and-secrets|21 密码学、PKI、KMS 与 Secret 治理]] · [[docs/25-email-and-collaboration-security|25 邮件与协作平台安全]] · [[docs/27-third-party-risk-management|27 第三方风险管理]]
+- **横向关联**：无
+
+<!-- obsidian-relations:end -->

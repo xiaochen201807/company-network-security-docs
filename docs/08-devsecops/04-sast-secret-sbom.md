@@ -1,3 +1,21 @@
+---
+aliases:
+  - "SAST、Secret 与 SBOM Standard"
+type: "standard"
+domain: "devsecops"
+phase:
+  - "protect"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/devsecops"
+  - "security/priority/p0"
+  - "security/phase/protect"
+parent:
+  - "[[docs/08-devsecops-and-supply-chain]]"
+---
 # SAST、Secret 与 SBOM Standard
 
 ## SAST

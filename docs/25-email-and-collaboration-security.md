@@ -1,3 +1,30 @@
+---
+aliases:
+  - "邮件与协作平台安全"
+type: "standard"
+domain: "email-security"
+phase:
+  - "protect"
+  - "detect"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/email-security"
+  - "security/priority/p0"
+  - "security/phase/protect"
+  - "security/phase/detect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/04-identity-and-access-control]]"
+  - "[[docs/07-data-security]]"
+  - "[[docs/30-security-awareness-and-workforce]]"
+  - "[[docs/10-monitoring-and-security-operations]]"
+  - "[[docs/11-incident-response]]"
+  - "[[docs/26-privacy-and-personal-data-protection]]"
+---
 # 25 - 邮件与协作平台安全
 
 > 邮件、企业 IM、云文档和协作平台是身份攻击、钓鱼、BEC、恶意附件、OAuth 授权滥用和数据外泄的重要入口。
@@ -277,3 +304,16 @@ DLP 规则需持续调优，避免大量误报。
 ## 27. 关联控制
 
 SEC-EML-001、SEC-EML-002、SEC-IAM-*、SEC-DAT-*、SEC-AWR-*。
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/04-identity-and-access-control|04 身份与访问控制]] · [[docs/07-data-security|07 数据安全]] · [[docs/30-security-awareness-and-workforce|30 安全意识、Security Champion 与安全人才体系]]
+- **下游知识**：[[docs/10-monitoring-and-security-operations|10 日志监控与安全运营]] · [[docs/11-incident-response|11 安全事件与应急响应]]
+- **横向关联**：[[docs/26-privacy-and-personal-data-protection|26 隐私与个人信息保护]]
+
+<!-- obsidian-relations:end -->

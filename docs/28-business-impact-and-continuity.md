@@ -1,3 +1,26 @@
+---
+aliases:
+  - "BIA 与业务连续性"
+type: "standard"
+domain: "business-continuity"
+phase:
+  - "recover"
+priority: "P1"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/business-continuity"
+  - "security/priority/p1"
+  - "security/phase/recover"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/11-incident-response]]"
+  - "[[docs/27-third-party-risk-management]]"
+  - "[[docs/12-backup-dr-and-reliability]]"
+  - "[[docs/29-physical-and-media-security]]"
+---
 # 28 - BIA 与业务连续性管理
 
 > 本文档补充 12 章节的技术容灾视角，从业务流程出发确定最大可接受中断、关键依赖、替代方式和连续性策略。
@@ -257,3 +280,16 @@ Tier 1 供应商明确：
 ## 24. 关联控制
 
 SEC-BCM-001～004、SEC-IR-*、SEC-TPR-*。
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/11-incident-response|11 安全事件与应急响应]] · [[docs/27-third-party-risk-management|27 第三方风险管理]]
+- **下游知识**：[[docs/12-backup-dr-and-reliability|12 备份容灾与稳定性协同]]
+- **横向关联**：[[docs/29-physical-and-media-security|29 物理、环境与介质安全]]
+
+<!-- obsidian-relations:end -->

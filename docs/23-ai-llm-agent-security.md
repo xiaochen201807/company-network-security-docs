@@ -1,3 +1,29 @@
+---
+aliases:
+  - "AI、LLM 与 Agent 安全"
+type: "standard"
+domain: "ai-security"
+phase:
+  - "protect"
+priority: "P2"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/ai-security"
+  - "security/priority/p2"
+  - "security/phase/protect"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/06-application-and-api-security]]"
+  - "[[docs/07-data-security]]"
+  - "[[docs/17-security-architecture-and-threat-modeling]]"
+  - "[[docs/18-product-security-and-secure-by-default]]"
+  - "[[docs/21-cryptography-pki-kms-and-secrets]]"
+  - "[[docs/22-security-engineering-platform]]"
+  - "[[docs/26-privacy-and-personal-data-protection]]"
+---
 # 23 - AI、LLM 与 Agent 安全
 
 > 本文档适用于公司使用或开发生成式 AI、RAG、LLM 应用、Agent、MCP/Tool Calling、AI Coding 等场景。参考 NIST SP 800-218A 的安全开发思想，并结合当前 LLM/Agent 风险进行公司化治理。
@@ -418,3 +444,16 @@ Prompt/Response 日志可能包含敏感数据。
 | 版本 | 日期 | 说明 |
 |---|---|---|
 | V0.1 | 2026-09 | 建立 AI、LLM、Agent 与 Tool Security 框架 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/06-application-and-api-security|06 应用与 API 安全]] · [[docs/07-data-security|07 数据安全]] · [[docs/17-security-architecture-and-threat-modeling|17 安全架构评审与 Threat Modeling]] · [[docs/18-product-security-and-secure-by-default|18 Product Security 与 Secure by Default]] · [[docs/21-cryptography-pki-kms-and-secrets|21 密码学、PKI、KMS 与 Secret 治理]] · [[docs/22-security-engineering-platform|22 Security Engineering Platform]]
+- **下游知识**：[[docs/26-privacy-and-personal-data-protection|26 隐私与个人信息保护]]
+- **横向关联**：无
+
+<!-- obsidian-relations:end -->

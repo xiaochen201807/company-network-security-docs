@@ -1,3 +1,28 @@
+---
+aliases:
+  - "备份容灾与稳定性协同"
+type: "standard"
+domain: "resilience"
+phase:
+  - "recover"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/resilience"
+  - "security/priority/p0"
+  - "security/phase/recover"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/11-incident-response]]"
+  - "[[docs/28-business-impact-and-continuity]]"
+  - "[[docs/14-security-baselines-and-checklists]]"
+  - "[[docs/16-cloud-and-workload-security]]"
+  - "[[docs/27-third-party-risk-management]]"
+  - "[[docs/29-physical-and-media-security]]"
+---
 # 12 - 备份、容灾与稳定性协同
 
 > 本文档用于统一公司安全、备份、容灾、性能和稳定性要求。目标不是把安全和 SRE 分开治理，而是在故障、攻击、误操作和容量压力下仍能维持或恢复关键业务。
@@ -549,3 +574,16 @@ RTO/RPO 清单、备份任务、恢复报告、容灾演练、发布记录、回
 |---|---|---|
 | V0.1 | 2026-09 | 建立备份容灾与稳定性框架 |
 | V0.2 | 2026-09 | 完善 SLO/SLI、容量、Java 性能、韧性模式、恢复、容灾和演练 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/11-incident-response|11 安全事件与应急响应]] · [[docs/28-business-impact-and-continuity|28 BIA 与业务连续性]]
+- **下游知识**：无
+- **横向关联**：[[docs/14-security-baselines-and-checklists|14 安全基线与检查清单]] · [[docs/16-cloud-and-workload-security|16 云与 Workload 安全]] · [[docs/27-third-party-risk-management|27 第三方风险管理]] · [[docs/29-physical-and-media-security|29 物理、环境与介质安全]]
+
+<!-- obsidian-relations:end -->

@@ -1,3 +1,26 @@
+---
+aliases:
+  - "安全治理与制度"
+type: "standard"
+domain: "governance"
+phase:
+  - "govern"
+priority: "P0"
+status: "active"
+tags:
+  - "security"
+  - "security/type/standard"
+  - "security/domain/governance"
+  - "security/priority/p0"
+  - "security/phase/govern"
+parent:
+  - "[[docs/knowledge-map]]"
+related:
+  - "[[docs/00-security-overview]]"
+  - "[[docs/13-compliance-and-audit]]"
+  - "[[docs/27-third-party-risk-management]]"
+  - "[[docs/30-security-awareness-and-workforce]]"
+---
 # 01 - 安全治理与制度
 
 > 本文档规定公司安全治理、制度生命周期、风险管理、例外审批、人员责任、第三方风险和管理层监督的基本要求。
@@ -230,3 +253,16 @@ GRC 平台、自动证据采集、风险量化、控制有效性自动验证。
 |---|---|---|
 | V0.1 | 2026-09 | 建立治理框架 |
 | V0.2 | 2026-09 | 完善制度生命周期、风险、例外、人员和第三方治理 |
+
+<!-- obsidian-relations:start -->
+## Obsidian 关联知识
+
+> [!tip] 图谱导航
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+
+- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]
+- **前置知识**：[[docs/00-security-overview|00 公司安全体系总览]]
+- **下游知识**：[[docs/13-compliance-and-audit|13 合规与审计]] · [[docs/27-third-party-risk-management|27 第三方风险管理]] · [[docs/30-security-awareness-and-workforce|30 安全意识、Security Champion 与安全人才体系]]
+- **横向关联**：无
+
+<!-- obsidian-relations:end -->
