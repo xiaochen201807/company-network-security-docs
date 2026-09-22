@@ -1,0 +1,75 @@
+# 第三方安全评估模板
+
+## 基本信息
+
+| 字段 | 内容 |
+|---|---|
+| Supplier | |
+| Service | |
+| Business Owner | |
+| Procurement Owner | |
+| Security Reviewer | |
+| Risk Tier | Tier 1 / 2 / 3 |
+| Contract End | |
+
+## 风险范围
+
+- [ ] 生产访问
+- [ ] 管理员权限
+- [ ] 敏感数据
+- [ ] 大量个人信息
+- [ ] 核心业务依赖
+- [ ] 软件供应链
+- [ ] SaaS
+- [ ] Cloud
+
+## 安全能力
+
+| Domain | 结论 | 证据/备注 |
+|---|---|---|
+| IAM/MFA | | |
+| Vulnerability | | |
+| Secure Development | | |
+| Logging | | |
+| Incident Response | | |
+| BCP/DR | | |
+| Data Protection | | |
+| Subprocessor | | |
+| Patch/EOL | | |
+
+## 访问
+
+- 账号：
+- VPN/ZTNA：
+- API Token：
+- 到期时间：
+- Owner：
+
+## 数据
+
+- 数据类型：
+- Retention：
+- Encryption：
+- Data Return/Delete：
+
+## 合同
+
+- [ ] Security Clause
+- [ ] Incident Notification
+- [ ] Vulnerability/Patch
+- [ ] Data Use
+- [ ] Subprocessor
+- [ ] Offboarding
+
+## 风险
+
+| Finding | Risk | Compensating Control | Owner | Due |
+|---|---|---|---|---|
+| | | | | |
+
+## 结论
+
+- [ ] Approve
+- [ ] Conditional Approve
+- [ ] Reject
+- [ ] Risk Acceptance Required

@@ -1,0 +1,37 @@
+# Secret Leak Playbook
+
+| Metadata | Value |
+|---|---|
+| Document ID | SEC-PLB-IR-002 |
+| Type | Playbook |
+| Owner | Security/DevOps |
+
+## Trigger
+
+Git、CI Log、Artifact、Chat、Ticket、Email 或扫描器发现 Password、Token、Private Key、AccessKey。
+
+## Immediate Actions
+
+1. 不等待删除代码，立即判断 Secret 是否真实。
+2. 吊销/禁用旧 Secret。
+3. 创建新 Secret。
+4. 更新所有合法使用方。
+5. 查询旧 Secret 的历史使用日志。
+6. 检查是否存在未授权访问。
+7. 清理 Git/Artifact/Log 等传播位置。
+8. 如已被利用，升级安全事件。
+
+## Special Cases
+
+### Cloud AccessKey
+禁用 Key，检查 IAM/Cloud Audit、资源创建和数据访问。
+
+### Private Key / Certificate
+吊销/替换证书或可信关系，检查使用范围。
+
+### CI/CD Credential
+检查最近 Pipeline、Artifact 和 Production Deploy。
+
+## Close Criteria
+
+Secret 已轮换、旧凭据不可用、使用范围明确、无未处理异常访问、根因有整改。

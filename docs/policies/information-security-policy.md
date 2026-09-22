@@ -1,0 +1,57 @@
+# Information Security Policy
+
+| Metadata | Value |
+|---|---|
+| Document ID | SEC-POL-001 |
+| Type | Policy |
+| Owner | Security |
+| Approver | 待公司确认 |
+| Version | 1.0 |
+| Review Cycle | Annual |
+
+## 1. Purpose
+
+保护公司业务、客户、员工、信息资产和服务的机密性、完整性、可用性与可恢复性。
+
+## 2. Scope
+
+适用于所有员工、外包、供应商以及公司管理或使用的信息系统、数据、设备、网络、云、软件和第三方服务。
+
+## 3. Principles
+
+- Risk Based。
+- Least Privilege。
+- Default Deny。
+- Defense in Depth。
+- Secure by Design / Default。
+- Auditability。
+- Resilience。
+- Continuous Improvement。
+
+## 4. Mandatory Governance
+
+- 关键资产必须有 Owner。
+- 重大风险必须有 Accountable。
+- MUST 控制无法满足时必须走例外。
+- 安全事件必须及时报告。
+- 高权限访问必须受控并可审计。
+- 敏感数据必须按分类实施保护。
+- 产品、系统和供应链安全必须进入研发与发布流程。
+
+## 5. Responsibilities
+
+Security 负责安全体系、标准、检测与专业支持；System/Business Owner 对业务系统和剩余风险负责；IT/Dev/Ops/Data 等角色按 RACI 执行具体控制。
+
+## 6. Exceptions
+
+例外必须记录风险、补偿控制、Owner、Approver 和 Expiry。
+
+## 7. Enforcement
+
+重大或重复违反安全政策的情况按公司管理制度处理。处置应考虑事实、风险、员工职责和适用制度。
+
+## 8. Related
+
+- Security Control Catalog
+- Security RACI
+- 00～30 Domain Standards
