@@ -680,14 +680,23 @@ class QualityChecker:
             if directory.exists():
                 targets.extend(sorted(directory.glob("*.md")))
 
-        required_keys = ("Document ID", "Type", "Owner")
+        required_keys = {
+            "Document ID": ("Document ID", "文档 ID"),
+            "Type": ("Type", "类型"),
+            "Owner": ("Owner", "负责人"),
+        }
         document_ids: dict[str, list[str]] = defaultdict(list)
         problems = 0
+        checked = 0
 
         for path in targets:
             text = self.read(path)
-            for key in required_keys:
-                if key not in text:
+            frontmatter = self.extract_frontmatter(text)
+            if frontmatter and re.search(r'^type:\s*["\']?moc["\']?\s*$', frontmatter, re.M):
+                continue
+            checked += 1
+            for key, aliases in required_keys.items():
+                if not any(alias in text for alias in aliases):
                     problems += 1
                     self.add(
                         "WARNING",
@@ -708,7 +717,7 @@ class QualityChecker:
                     f"Duplicate Document ID {doc_id}: {', '.join(paths)}",
                 )
 
-        self.metrics["metadata_docs_checked"] = len(targets)
+        self.metrics["metadata_docs_checked"] = checked
         self.metrics["metadata_problems"] = problems
 
     @staticmethod

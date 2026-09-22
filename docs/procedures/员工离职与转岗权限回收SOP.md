@@ -22,14 +22,14 @@ parent:
 |---|---|
 | Document ID | SEC-SOP-IAM-001 |
 | Type | Procedure |
-| Owner | IAM/IT |
+| 负责人 | IAM/IT |
 | Related Control | SEC-IAM-002 |
 
-## 1. Trigger
+## 1. 触发条件
 
 HR 提交离职/转岗生效信息。
 
-## 2. Offboarding
+## 2. 离职处理
 
 在生效时间执行：
 
@@ -37,13 +37,13 @@ HR 提交离职/转岗生效信息。
 - 撤销 VPN/ZTNA。
 - Git/Jenkins/Cloud 管理权限回收。
 - 数据库/生产权限回收。
-- 撤销 Token/SSH Key/证书。
+- 撤销令牌/SSH 密钥/证书。
 - 注销高风险 Session。
 - 回收公司设备。
-- 转移 System/Data Owner。
+- 转移 System/Data 负责人。
 - 处理个人创建的自动化和服务账号。
 
-## 3. Transfer
+## 3. 转岗处理
 
 转岗：
 
@@ -51,10 +51,10 @@ HR 提交离职/转岗生效信息。
 2. 新岗位权限重新审批。
 3. 检查生产、数据、管理员、VPN 和第三方系统。
 
-## 4. Verification
+## 4. 验证
 
-IAM/IT 输出回收清单并由系统 Owner 抽查高权限系统。
+IAM/IT 输出回收清单并由系统负责人抽查高权限系统。
 
-## 5. Evidence
+## 5. 证据
 
-HR Trigger、Account Disable、Access Review、Device Return、Owner Transfer。
+HR Trigger、Account Disable、Access 评审、Device Return、负责人 Transfer。

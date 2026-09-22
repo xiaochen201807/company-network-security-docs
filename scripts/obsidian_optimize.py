@@ -26,22 +26,22 @@ CORE = {
     12: {"alias": "备份容灾与稳定性协同", "domain": "resilience", "phase": ["recover"], "priority": "P0", "up": [11,28], "down": [], "cross": [14,16,27,29]},
     13: {"alias": "合规与审计", "domain": "audit", "phase": ["govern"], "priority": "P1", "up": [0,1], "down": [], "cross": [14]},
     14: {"alias": "安全基线与检查清单", "domain": "security-baseline", "phase": ["protect"], "priority": "P0", "up": [3,5,8], "down": [9], "cross": [12,16]},
-    15: {"alias": "Zero Trust 与设备可信", "domain": "zero-trust", "phase": ["protect"], "priority": "P1", "up": [2,4,5], "down": [], "cross": [3,16,21]},
-    16: {"alias": "云与 Workload 安全", "domain": "cloud-security", "phase": ["protect"], "priority": "P1", "up": [2,3,4,5], "down": [], "cross": [8,12,14,15,21,22]},
-    17: {"alias": "安全架构评审与 Threat Modeling", "domain": "security-architecture", "phase": ["identify","protect"], "priority": "P1", "up": [2], "down": [6,8,18,22,23,24], "cross": []},
-    18: {"alias": "Product Security 与 Secure by Default", "domain": "product-security", "phase": ["protect"], "priority": "P1", "up": [6,8,17], "down": [20], "cross": [22,23,24]},
-    19: {"alias": "威胁情报、Red Team 与 Purple Team", "domain": "threat-informed-defense", "phase": ["detect"], "priority": "P1", "up": [9,10], "down": [11], "cross": [14]},
+    15: {"alias": "零信任与设备可信", "domain": "zero-trust", "phase": ["protect"], "priority": "P1", "up": [2,4,5], "down": [], "cross": [3,16,21]},
+    16: {"alias": "云与工作负载安全", "domain": "cloud-security", "phase": ["protect"], "priority": "P1", "up": [2,3,4,5], "down": [], "cross": [8,12,14,15,21,22]},
+    17: {"alias": "安全架构评审与威胁建模", "domain": "security-architecture", "phase": ["identify","protect"], "priority": "P1", "up": [2], "down": [6,8,18,22,23,24], "cross": []},
+    18: {"alias": "产品安全与默认安全", "domain": "product-security", "phase": ["protect"], "priority": "P1", "up": [6,8,17], "down": [20], "cross": [22,23,24]},
+    19: {"alias": "威胁情报、红队与紫队", "domain": "threat-informed-defense", "phase": ["detect"], "priority": "P1", "up": [9,10], "down": [11], "cross": [14]},
     20: {"alias": "PSIRT 与漏洞披露", "domain": "psirt", "phase": ["respond"], "priority": "P2", "up": [9,18], "down": [11], "cross": [27]},
-    21: {"alias": "密码学、PKI、KMS 与 Secret 治理", "domain": "cryptography", "phase": ["protect"], "priority": "P1", "up": [4,7], "down": [6,8,16,22], "cross": [15]},
-    22: {"alias": "Security Engineering Platform", "domain": "security-platform", "phase": ["protect"], "priority": "P1", "up": [6,8,17,21], "down": [18], "cross": [14]},
-    23: {"alias": "AI、LLM 与 Agent 安全", "domain": "ai-security", "phase": ["protect"], "priority": "P2", "up": [6,7,17,18,21,22], "down": [26], "cross": []},
+    21: {"alias": "密码学、PKI、KMS 与凭据治理", "domain": "cryptography", "phase": ["protect"], "priority": "P1", "up": [4,7], "down": [6,8,16,22], "cross": [15]},
+    22: {"alias": "安全工程平台", "domain": "security-platform", "phase": ["protect"], "priority": "P1", "up": [6,8,17,21], "down": [18], "cross": [14]},
+    23: {"alias": "AI、大模型与智能体安全", "domain": "ai-security", "phase": ["protect"], "priority": "P2", "up": [6,7,17,18,21,22], "down": [26], "cross": []},
     24: {"alias": "移动应用安全", "domain": "mobile-security", "phase": ["protect"], "priority": "P2", "up": [6,17,18,21,22], "down": [], "cross": []},
     25: {"alias": "邮件与协作平台安全", "domain": "email-security", "phase": ["protect","detect"], "priority": "P0", "up": [4,7,30], "down": [10,11], "cross": [26]},
     26: {"alias": "隐私与个人信息保护", "domain": "privacy", "phase": ["govern","protect"], "priority": "P1", "up": [7,25], "down": [], "cross": [18,23,27]},
     27: {"alias": "第三方风险管理", "domain": "third-party-risk", "phase": ["govern"], "priority": "P1", "up": [1], "down": [7,26,28], "cross": [4,12]},
     28: {"alias": "BIA 与业务连续性", "domain": "business-continuity", "phase": ["recover"], "priority": "P1", "up": [11,27], "down": [12], "cross": [29]},
     29: {"alias": "物理、环境与介质安全", "domain": "physical-security", "phase": ["protect"], "priority": "P2", "up": [5,28], "down": [], "cross": [12,30]},
-    30: {"alias": "安全意识、Security Champion 与安全人才体系", "domain": "security-awareness", "phase": ["govern","protect"], "priority": "P1", "up": [1], "down": [6,8,10,11,25], "cross": [29]},
+    30: {"alias": "安全意识、安全倡导者与安全人才体系", "domain": "security-awareness", "phase": ["govern","protect"], "priority": "P1", "up": [1], "down": [6,8,10,11,25], "cross": [29]},
 }
 
 EXTRA_NOTES = {
@@ -51,7 +51,7 @@ EXTRA_NOTES = {
         "parent": [], "related": ["docs/00-公司安全体系总览", "docs/governance/安全治理总览", "docs/Obsidian使用指南"],
     },
     "docs/governance/安全治理总览.md": {
-        "alias": "Security Governance V2.0", "type": "moc", "domain": "governance",
+        "alias": "安全治理 V2.0", "type": "moc", "domain": "governance",
         "phase": ["govern"], "priority": "P0", "parent": ["docs/公司安全知识图谱"],
         "related": [
             "docs/governance/安全控制目录",
@@ -62,17 +62,17 @@ EXTRA_NOTES = {
         ],
     },
     "docs/governance/安全控制目录.md": {
-        "alias": "Security Control Catalog", "type": "catalog", "domain": "governance",
+        "alias": "安全控制目录", "type": "catalog", "domain": "governance",
         "phase": ["govern"], "priority": "P0", "parent": ["docs/governance/安全治理总览"],
         "related": ["docs/governance/安全现状与目标画像", "docs/governance/安全职责RACI", "docs/13-合规与审计"],
     },
     "docs/governance/安全现状与目标画像.md": {
-        "alias": "Security Current Target Profile", "type": "profile", "domain": "governance",
+        "alias": "安全现状与目标画像", "type": "profile", "domain": "governance",
         "phase": ["govern"], "priority": "P0", "parent": ["docs/governance/安全治理总览"],
         "related": ["docs/governance/安全控制目录", "docs/governance/公司安全参数登记表", "docs/13-合规与审计"],
     },
     "docs/governance/安全职责RACI.md": {
-        "alias": "Security RACI", "type": "matrix", "domain": "governance",
+        "alias": "安全职责矩阵（RACI）", "type": "matrix", "domain": "governance",
         "phase": ["govern"], "priority": "P0", "parent": ["docs/governance/安全治理总览"],
         "related": ["docs/governance/安全控制目录", "docs/01-安全治理与制度"],
     },
@@ -91,6 +91,16 @@ EXTRA_NOTES = {
         "phase": ["govern"], "priority": "P1", "parent": ["docs/公司安全知识图谱"],
         "related": ["docs/公司安全知识图谱", "docs/governance/安全治理总览"],
     },
+    "docs/playbooks/处置手册索引.md": {
+        "alias": "安全处置手册索引", "type": "moc", "domain": "operations",
+        "phase": ["respond"], "priority": "P0", "parent": ["docs/公司安全知识图谱"],
+        "related": ["docs/11-安全事件与应急响应", "docs/10-日志监控与安全运营"],
+    },
+    "docs/templates/模板索引.md": {
+        "alias": "安全模板索引", "type": "moc", "domain": "template",
+        "phase": ["govern"], "priority": "P1", "parent": ["docs/公司安全知识图谱"],
+        "related": [],
+    },
 }
 
 TYPE_BY_DIR = {
@@ -98,6 +108,11 @@ TYPE_BY_DIR = {
     "procedures": "procedure",
     "playbooks": "playbook",
     "templates": "template",
+}
+
+SUPPORTING_INDEX_FILES = {
+    "处置手册索引.md",
+    "模板索引.md",
 }
 
 REL_START = "<!-- obsidian-relations:start -->"
@@ -180,7 +195,7 @@ def relation_block(num: int, meta: dict) -> str:
         "## Obsidian 关联知识",
         "",
         "> [!tip] 图谱导航",
-        "> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。",
+        "> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian 全局图谱 / 局部图谱。业务正文请维护在上方章节。",
         "",
         "- **上级导航**：[[docs/公司安全知识图谱|公司安全知识图谱]]",
         f"- **前置知识**：{links(meta['up'])}",
@@ -274,6 +289,8 @@ def apply_supporting() -> int:
         if not directory.exists():
             continue
         for path in sorted(directory.glob("*.md")):
+            if path.name in SUPPORTING_INDEX_FILES:
+                continue
             text = path.read_text(encoding="utf-8")
             title = re.search(r"^#\s+(.+)$", text, re.M)
             alias = title.group(1).strip() if title else path.stem

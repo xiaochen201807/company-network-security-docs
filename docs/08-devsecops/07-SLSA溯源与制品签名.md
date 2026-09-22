@@ -22,19 +22,19 @@ parent:
 
 证明生产制品由预期源码、预期 Builder、预期 Pipeline 生成并可验证。
 
-## Provenance
+## 溯源证明（Provenance）
 
 重要 Release 记录 Source Repo、Commit、Builder Identity、Build Invocation、Build Time、Artifact Digest。
 
-## Attestation
+## 证明声明（Attestation）
 
 可为 Build Provenance、SBOM、SAST、SCA、Image Scan、Policy Check 产生 Attestation。
 
-## Ephemeral Runner
+## 临时执行器（Ephemeral Runner）
 
 高风险构建使用临时 Runner，结束后销毁，降低跨项目残留和持久化风险。
 
-## Artifact Signing
+## 制品签名
 
 ~~~text
 Source → Trusted Builder
@@ -47,18 +47,18 @@ Source → Trusted Builder
               Production
 ~~~
 
-## Deploy Verification
+## 部署验证
 
-验证 Digest、Signature、Provenance、Approved Registry/Repository、Security Gate。
+验证 Digest、Signature、Provenance、Approved Registry/Repository、安全门禁。
 
 ## SLSA
 
 参考 SLSA v1.2 的 Build/Source 思路逐步提升，不以追求标签替代实际控制。
 
-## Metrics
+## 度量
 
-Provenance、Signing、Ephemeral Runner、Verify-before-deploy Coverage 与 Untraceable Artifact Count。
+Provenance、Signing、Ephemeral Runner、Verify-before-deploy 覆盖率与 Untraceable Artifact Count。
 
-## Controls
+## 控制项
 
 SEC-SUP-001、SEC-SUP-005、SEC-SUP-006。

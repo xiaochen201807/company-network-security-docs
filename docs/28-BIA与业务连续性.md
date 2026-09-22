@@ -36,11 +36,11 @@ related:
 
 ## 2. BIA
 
-Business Impact Analysis 用于评估业务中断影响。
+业务影响分析 用于评估业务中断影响。
 
 每个关键业务流程至少记录：
 
-- Process Owner。
+- Process 负责人。
 - 关键产品/服务。
 - 用户/客户影响。
 - 财务影响。
@@ -60,14 +60,14 @@ RTO 应小于 MTPD，并留出恢复和业务处理缓冲。
 
 ## 4. RTO / RPO
 
-业务 Owner 与 IT/SRE 联合确认：
+业务负责人与 IT/SRE 联合确认：
 
 - RTO：多久恢复服务。
 - RPO：最多允许丢多少数据。
 
 避免所有系统都写成“0 数据丢失、5 分钟恢复”但没有对应成本与架构。
 
-## 5. Dependency Mapping
+## 5. 依赖关系映射
 
 关键业务依赖：
 
@@ -83,7 +83,7 @@ RTO 应小于 MTPD，并留出恢复和业务处理缓冲。
 - 办公场地。
 - 支付/短信/邮件等外部服务。
 
-## 6. Single Point
+## 6. 单点依赖
 
 业务连续性不仅看技术单点，还包括：
 
@@ -94,7 +94,7 @@ RTO 应小于 MTPD，并留出恢复和业务处理缓冲。
 - 唯一审批人。
 - 唯一外部接口。
 
-## 7. Continuity Strategy
+## 7. 连续性策略
 
 策略可包括：
 
@@ -107,7 +107,7 @@ RTO 应小于 MTPD，并留出恢复和业务处理缓冲。
 - 关键岗位备份人员。
 - 数据离线导出/恢复流程。
 
-## 8. Manual Workaround
+## 8. 人工绕行方案
 
 对于可接受短时间降级的流程，提前定义：
 
@@ -119,19 +119,19 @@ RTO 应小于 MTPD，并留出恢复和业务处理缓冲。
 
 避免故障时临时设计。
 
-## 9. Crisis Organization
+## 9. 危机组织
 
 重大业务中断时明确：
 
 - Crisis Lead。
-- Business Owner。
+- Business 负责人。
 - IT/SRE。
 - Security。
 - Communications。
 - Legal。
 - Vendor Contact。
 
-## 10. Invocation
+## 10. 启动条件
 
 BCP 启动条件应清晰，例如：
 
@@ -141,7 +141,7 @@ BCP 启动条件应清晰，例如：
 - 大规模网络故障。
 - 勒索事件影响生产。
 
-## 11. Communications
+## 11. 沟通机制
 
 预先准备：
 
@@ -149,11 +149,11 @@ BCP 启动条件应清晰，例如：
 - 客户沟通。
 - 供应商沟通。
 - 管理层更新。
-- Status Page（如适用）。
+- 状态 Page（如适用）。
 
 未经授权人员不得对外发布未确认事件信息。
 
-## 12. Remote Work
+## 12. 远程办公
 
 如果办公场地不可用，关键岗位确认：
 
@@ -164,7 +164,7 @@ BCP 启动条件应清晰，例如：
 - 审批。
 - 备用网络。
 
-## 13. Supplier Continuity
+## 13. 供应商连续性
 
 Tier 1 供应商明确：
 
@@ -174,7 +174,7 @@ Tier 1 供应商明确：
 - 替代方案。
 - 数据导出/迁移能力。
 
-## 14. Backup 与 BCP
+## 14. 备份与业务连续性计划（BCP）
 
 备份只是连续性的一部分。
 
@@ -185,7 +185,7 @@ Tier 1 供应商明确：
 - DNS/证书是否可恢复。
 - 业务是否能重新开始处理。
 
-## 15. Scenario
+## 15. 演练场景
 
 演练场景建议：
 
@@ -197,18 +197,18 @@ Tier 1 供应商明确：
 - 办公场地不可用。
 - DNS/证书问题。
 
-## 16. Exercise
+## 16. 演练
 
-### Tabletop
+### 桌面演练
 讨论决策和流程。
 
-### Technical Recovery
+### 技术恢复演练
 实际恢复系统。
 
-### Integrated Exercise
+### 综合演练
 业务、IT、安全、供应商共同演练。
 
-## 17. Exercise Result
+## 17. 演练结果
 
 至少记录：
 
@@ -221,7 +221,7 @@ Tier 1 供应商明确：
 - 技术问题。
 - 改进项。
 
-## 18. BCP Maintenance
+## 18. BCP 维护
 
 以下变化触发更新：
 
@@ -264,13 +264,13 @@ Tier 1 供应商明确：
 - RTO/RPO。
 - BCP。
 - Dependency Map。
-- Exercise Report。
+- Exercise 报告。
 - Improvement Action。
 
 ## 23. 当前待确认
 
 - [ ] 核心业务流程
-- [ ] BIA Owner
+- [ ] BIA 负责人
 - [ ] MTPD
 - [ ] RTO/RPO 审批人
 - [ ] Crisis Lead
@@ -285,7 +285,7 @@ SEC-BCM-001～004、SEC-IR-*、SEC-TPR-*。
 ## Obsidian 关联知识
 
 > [!tip] 图谱导航
-> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian 全局图谱 / 局部图谱。业务正文请维护在上方章节。
 
 - **上级导航**：[[docs/公司安全知识图谱|公司安全知识图谱]]
 - **前置知识**：[[docs/11-安全事件与应急响应|11 安全事件与应急响应]] · [[docs/27-第三方风险管理|27 第三方风险管理]]

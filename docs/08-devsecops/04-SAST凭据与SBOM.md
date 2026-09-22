@@ -24,20 +24,20 @@ parent:
 
 高风险结果人工验证；Security Hotspot 不自动等同漏洞。
 
-## Secret Scan
+## 凭据扫描（Secret Scan）
 
 覆盖 Commit、History、PR/MR、Jenkins Workspace/Log、Artifact、Container Image。
 
-真实 Secret 泄露后必须吊销/轮换，仅删除文本不够。
+真实 凭据泄露后必须吊销/轮换，仅删除文本不够。
 
 ## SBOM
 
 正式 Release SHOULD 生成 SBOM，并与 Build/Commit/Artifact 绑定，用于 CVE 反查。
 
-## Evidence
+## 证据
 
-SAST、Secret Finding、Rotation Record、SBOM、Exception。
+SAST、凭据发现项、轮换记录、SBOM、例外。
 
-## Controls
+## 控制项
 
 SEC-SUP-003、SEC-SUP-005、SEC-APP-*。

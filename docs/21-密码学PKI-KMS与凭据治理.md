@@ -1,6 +1,6 @@
 ---
 aliases:
-  - "密码学、PKI、KMS 与 Secret 治理"
+  - "密码学、PKI、KMS 与凭据治理"
 type: "standard"
 domain: "cryptography"
 phase:
@@ -24,15 +24,15 @@ related:
   - "[[docs/22-安全工程平台]]"
   - "[[docs/15-零信任与设备可信]]"
 ---
-# 21 - 密码学、PKI、KMS 与 Secret 治理
+# 21 - 密码学、PKI、KMS 与 凭据治理
 
-> 本文档用于统一公司密码学算法、TLS、证书、PKI、KMS/HSM、应用 Secret、代码签名密钥和密钥生命周期管理。目标是避免不同团队自行选择算法、散落密钥或在无法轮换的情况下形成长期高风险依赖。
+> 本文档用于统一公司密码学算法、TLS、证书、PKI、KMS/HSM、应用 凭据、代码签名密钥和密钥生命周期管理。目标是避免不同团队自行选择算法、散落密钥或在无法轮换的情况下形成长期高风险依赖。
 
 ## 1. 目标
 
 - 公司有统一密码学标准。
 - 证书和密钥全生命周期可管理。
-- Secret 不散落在代码、Wiki、脚本和终端。
+- 凭据 不散落在代码、Wiki、脚本和终端。
 - 高价值密钥采用更严格保护。
 - 密钥支持轮换、吊销和恢复。
 - 可以快速回答“哪些系统使用了某个算法、证书或密钥”。
@@ -40,9 +40,9 @@ related:
 ## 2. 适用范围
 
 - TLS 证书。
-- API Key。
+- API 密钥。
 - JWT Key。
-- SSH Key。
+- SSH 密钥。
 - 数据加密 Key。
 - 数据库密码。
 - 云 AccessKey。
@@ -51,24 +51,24 @@ related:
 - CA/PKI。
 - Backup Encryption Key。
 
-## 3. Crypto Policy
+## 3. 密码学策略
 
 公司 SHOULD 定义统一密码学策略，包含：
 
 - 允许算法。
 - 禁止算法。
 - Key Length。
-- TLS Version。
+- TLS 版本。
 - Certificate Lifetime。
 - Rotation。
 - Storage。
-- Exception。
+- 例外。
 
 ## 4. 禁止自研密码算法
 
 开发人员不得自行设计加密、签名、Hash 或随机算法。优先使用成熟标准库。
 
-## 5. Crypto Inventory
+## 5. 密码学资产清单
 
 建议维护：
 
@@ -76,15 +76,15 @@ related:
 |---|---|
 | System | |
 | Algorithm | |
-| Purpose | |
+| 用途 | |
 | Key Type | |
 | Key Length | |
 | Library/Provider | |
-| Owner | |
+| 负责人 | |
 | Rotation | |
 | Expiry | |
 
-## 6. Crypto Agility
+## 6. 密码学敏捷性
 
 系统设计应避免算法硬编码到无法替换。
 
@@ -96,7 +96,7 @@ related:
 - 可批量替换证书。
 - 可识别受影响系统。
 
-## 7. Hash
+## 7. 哈希
 
 不同用途使用不同技术：
 
@@ -107,15 +107,15 @@ related:
 
 普通 Hash 不等于密码存储方案。
 
-## 8. Password Hash
+## 8. 密码哈希
 
 用户密码使用成熟密码哈希算法和合理成本参数，并支持未来调整。
 
 禁止直接使用快速 Hash 作为密码存储。
 
-## 9. Random Number
+## 9. 随机数
 
-用于 Token、Key、Nonce、Reset Link 的随机数必须来自密码学安全随机源。
+用于令牌、Key、Nonce、Reset Link 的随机数必须来自密码学安全随机源。
 
 ## 10. TLS
 
@@ -127,7 +127,7 @@ related:
 - 证书到期监控。
 - Hostname 验证。
 
-## 11. Internal TLS
+## 11. 内部 TLS
 
 内部链路是否启用 TLS/mTLS 根据数据和威胁模型决定。
 
@@ -139,7 +139,7 @@ related:
 - 管理面。
 - Multi-cloud。
 
-## 12. Certificate Lifecycle
+## 12. 证书生命周期
 
 ~~~text
 Request
@@ -159,12 +159,12 @@ Revoke
 Retire
 ~~~
 
-## 13. Certificate Inventory
+## 13. 证书清单
 
 至少记录：
 
 - Subject/SAN。
-- Owner。
+- 负责人。
 - System。
 - CA。
 - Issued Date。
@@ -178,7 +178,7 @@ SHOULD 优先自动续期证书，并监控自动化失败。
 
 不能因为“配置了自动续期”就取消到期告警。
 
-## 15. Private Key
+## 15. 私钥
 
 私钥：
 
@@ -188,7 +188,7 @@ SHOULD 优先自动续期证书，并监控自动化失败。
 - 不多人共享。
 - 泄露立即吊销/轮换。
 
-## 16. Internal PKI
+## 16. 内部 PKI
 
 如果公司有大量内部服务，可建设内部 PKI 管理：
 
@@ -230,7 +230,7 @@ CA 私钥属于高价值密钥。
 - 高价值主密钥。
 - 法规/合同明确要求。
 
-## 20. Envelope Encryption
+## 20. 信封加密
 
 大规模数据加密可使用：
 
@@ -246,7 +246,7 @@ Encrypted Data
 
 减少主密钥直接处理大量数据。
 
-## 21. Key Separation
+## 21. 密钥职责分离
 
 不同用途不要共用同一密钥：
 
@@ -256,7 +256,7 @@ Encrypted Data
 - API Signing。
 - Code Signing。
 
-## 22. Key Rotation
+## 22. 密钥轮换
 
 每类 Key 应明确：
 
@@ -264,11 +264,11 @@ Encrypted Data
 - Trigger。
 - Backward Compatibility。
 - Emergency Rotation。
-- Owner。
+- 负责人。
 
-## 23. Emergency Rotation
+## 23. 紧急轮换
 
-Secret 泄露时：
+凭据泄露时：
 
 1. 识别使用范围。
 2. 创建新 Key。
@@ -278,15 +278,15 @@ Secret 泄露时：
 6. 监控旧 Key 使用。
 7. 复盘。
 
-## 24. Key Versioning
+## 24. 密钥版本管理
 
 支持多版本 Key，避免轮换时全系统瞬间失败。
 
-## 25. Key Revocation
+## 25. 密钥吊销
 
 系统必须能够撤销不可信 Key，而不是只能“等它过期”。
 
-## 26. Key Deletion
+## 26. 密钥删除
 
 高价值 Key 删除：
 
@@ -297,25 +297,25 @@ Secret 泄露时：
 
 避免误删导致数据永久不可恢复。
 
-## 27. Backup Key
+## 27. 备份密钥
 
 加密备份的恢复密钥必须与备份同时考虑灾难恢复。
 
 如果备份存在但 Key 丢失，等同于不可恢复。
 
-## 28. Secret Manager
+## 28. 凭据管理平台（Secret Manager）
 
 优先集中管理：
 
 - Database Password。
-- API Token。
+- API 令牌。
 - Cloud Key。
 - Certificate。
 - Service Credential。
 
-## 29. Secret Delivery
+## 29. 凭据交付
 
-应用获取 Secret：
+应用获取 凭据：
 
 - Runtime Pull。
 - Short-lived Credential。
@@ -325,13 +325,13 @@ Secret 泄露时：
 
 避免长期写在配置文件。
 
-## 30. Secret in CI/CD
+## 30. CI/CD 中的凭据
 
 Jenkins/Git CI：
 
 - Credentials Store。
 - Masking。
-- 最小 Scope。
+- 最小范围。
 - 不打印。
 - Build 后清理。
 
@@ -343,10 +343,10 @@ Kubernetes Secret 并不天然等于强加密存储。
 
 - RBAC。
 - etcd Encryption。
-- External Secret Manager。
+- 外部凭据管理平台（Secret Manager）。
 - Namespace Isolation。
 
-## 32. Code Signing
+## 32. 代码签名
 
 正式软件包、脚本或制品成熟阶段可进行 Code/Artifact Signing。
 
@@ -357,9 +357,9 @@ Kubernetes Secret 并不天然等于强加密存储。
 - 构建系统最小权限访问。
 - 支持吊销/轮换。
 
-## 33. SSH Key
+## 33. SSH 密钥
 
-个人 SSH Key：
+个人 SSH 密钥：
 
 - 不共享。
 - 私钥加密。
@@ -368,7 +368,7 @@ Kubernetes Secret 并不天然等于强加密存储。
 
 大量 SSH 管理成熟阶段可采用 SSH CA 短期证书。
 
-## 34. JWT Key
+## 34. JWT 密钥
 
 JWT Signing Key：
 
@@ -376,9 +376,9 @@ JWT Signing Key：
 - Key ID/版本。
 - Rotation。
 - 多 Key 验证窗口。
-- 禁止弱 Secret。
+- 禁止弱 凭据。
 
-## 35. API Signing
+## 35. API 签名
 
 对高价值 API 使用签名时，明确：
 
@@ -389,9 +389,9 @@ JWT Signing Key：
 - Replay Prevention。
 - Rotation。
 
-## 36. Secret Scan
+## 36. 凭据扫描（Secret Scan）
 
-Secret Scan 覆盖：
+凭据扫描（Secret Scan）覆盖：
 
 - Git。
 - History。
@@ -400,7 +400,7 @@ Secret Scan 覆盖：
 - Container Image。
 - Wiki（能力允许时）。
 
-## 37. Certificate Monitoring
+## 37. 证书监控
 
 告警窗口可分：
 
@@ -411,14 +411,14 @@ Secret Scan 覆盖：
 
 具体按续期机制设置。
 
-## 38. Quantum Readiness
+## 38. 抗量子准备度
 
 公司短期不必盲目迁移所有算法，但 SHOULD 建立 Crypto Inventory，为未来算法迁移和 Post-Quantum 变化做好可见性。
 
 ## 39. 指标
 
-- Secret Manager 覆盖率。
-- 代码明文 Secret 数量。
+- 凭据管理平台（Secret Manager）覆盖率。
+- 代码明文 凭据 数量。
 - 证书过期事故。
 - 30 天内到期未续期数。
 - 长期 AccessKey 数。
@@ -427,16 +427,16 @@ Secret Scan 覆盖：
 
 ## 40. P0
 
-1. Secret 禁止明文入库。
+1. 凭据 禁止明文入库。
 2. 证书台账与到期告警。
 3. JWT/TLS/密码 Hash 标准。
-4. 高价值 Key Owner。
+4. 高价值 Key 负责人。
 5. Jenkins Credentials。
 6. 泄露轮换流程。
 
 ## 41. P1
 
-1. Secret Manager。
+1. 凭据管理平台（Secret Manager）。
 2. KMS。
 3. 自动证书续期。
 4. Key Rotation。
@@ -458,19 +458,19 @@ Secret Scan 覆盖：
 - Key Inventory。
 - Rotation。
 - KMS Audit。
-- Secret Scan。
+- 凭据扫描（Secret Scan）。
 - Code Signing。
-- Exception。
+- 例外。
 
 ## 44. 当前待确认
 
 - [ ] TLS 标准
 - [ ] 证书平台
-- [ ] Secret Manager
+- [ ] 凭据管理平台（Secret Manager）
 - [ ] KMS/HSM
 - [ ] Code Signing
 - [ ] Key Rotation 周期
-- [ ] Crypto Inventory Owner
+- [ ] Crypto Inventory 负责人
 
 ## 45. 参考
 
@@ -482,17 +482,17 @@ Secret Scan 覆盖：
 
 | 版本 | 日期 | 说明 |
 |---|---|---|
-| V0.1 | 2026-09 | 建立密码学、PKI、KMS 和 Secret 治理体系 |
+| V0.1 | 2026-09 | 建立密码学、PKI、KMS 和 凭据治理体系 |
 
 <!-- obsidian-relations:start -->
 ## Obsidian 关联知识
 
 > [!tip] 图谱导航
-> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian 全局图谱 / 局部图谱。业务正文请维护在上方章节。
 
 - **上级导航**：[[docs/公司安全知识图谱|公司安全知识图谱]]
 - **前置知识**：[[docs/04-身份与访问控制|04 身份与访问控制]] · [[docs/07-数据安全|07 数据安全]]
-- **下游知识**：[[docs/06-应用与API安全|06 应用与 API 安全]] · [[docs/08-DevSecOps与软件供应链安全|08 DevSecOps 与供应链安全]] · [[docs/16-云与工作负载安全|16 云与 Workload 安全]] · [[docs/22-安全工程平台|22 Security Engineering Platform]]
-- **横向关联**：[[docs/15-零信任与设备可信|15 Zero Trust 与设备可信]]
+- **下游知识**：[[docs/06-应用与API安全|06 应用与 API 安全]] · [[docs/08-DevSecOps与软件供应链安全|08 DevSecOps 与供应链安全]] · [[docs/16-云与工作负载安全|16 云与工作负载安全]] · [[docs/22-安全工程平台|22 安全工程平台]]
+- **横向关联**：[[docs/15-零信任与设备可信|15 零信任与设备可信]]
 
 <!-- obsidian-relations:end -->

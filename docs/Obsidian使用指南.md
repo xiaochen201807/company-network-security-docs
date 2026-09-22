@@ -21,7 +21,7 @@ related:
 ---
 # Obsidian 使用指南
 
-> 目标：把整个仓库直接作为 Obsidian Vault 打开后，既保留 Git 和标准 Markdown，又获得可用的 Global Graph、Local Graph、Properties、Tags 和 Backlinks。
+> 目标：把整个仓库直接作为 Obsidian Vault 打开后，既保留 Git 和标准 Markdown，又获得可用的 全局图谱、局部图谱、Properties、Tags 和 Backlinks。
 
 ## 1. 打开方式
 
@@ -41,7 +41,7 @@ company-network-security-docs/
 
 不建议按 00～30 顺序逐篇阅读。
 
-## 3. Properties
+## 3. 属性
 
 核心文档统一包含：
 
@@ -59,7 +59,7 @@ company-network-security-docs/
 
 Obsidian 会把 YAML Frontmatter 识别为 Properties。
 
-## 4. Tags
+## 4. 标签
 
 本项目使用嵌套 Tags：
 
@@ -79,11 +79,11 @@ tag:#security/phase/detect
 tag:#security/priority/p0
 ~~~
 
-## 5. Global Graph 推荐
+## 5. 全局图谱推荐
 
 打开 Graph View 后，建议先隐藏不影响主知识结构的节点。
 
-### 推荐 Search files
+### 推荐文件搜索条件
 
 ~~~text
 path:docs -path:docs/templates -path:docs/08-devsecops/V1历史完整参考 -path:docs/09-vulnerability/V1历史完整参考
@@ -96,7 +96,7 @@ path:docs -path:docs/templates -path:docs/08-devsecops/V1历史完整参考 -pat
 - Tags：按需要打开
 - Orphans：排查知识孤岛时打开，平时可关闭
 
-## 6. Graph Groups 推荐
+## 6. 图谱分组推荐
 
 建议按以下搜索条件创建 Groups：
 
@@ -114,9 +114,9 @@ tag:#security/domain/resilience
 
 颜色属于个人阅读偏好，本仓库不提交固定颜色配置。
 
-## 7. Local Graph 推荐
+## 7. 局部图谱推荐
 
-阅读单篇文档时，Local Graph 比 Global Graph 更实用：
+阅读单篇文档时，局部图谱 比 全局图谱 更实用：
 
 - Depth = 1：看直接前置、下游、横向关系。
 - Depth = 2：看完整业务链路。
@@ -126,7 +126,7 @@ tag:#security/domain/resilience
 
 [[docs/08-DevSecOps与软件供应链安全|08 DevSecOps 与供应链安全]]
 
-Local Graph 可以直接看到 AppSec、Threat Modeling、Vulnerability、Security Platform、Crypto 等关联节点。
+局部图谱 可以直接看到 AppSec、威胁建模、Vulnerability、Security Platform、Crypto 等关联节点。
 
 ## 8. 关联知识区
 
@@ -190,7 +190,7 @@ Standard
 SOP / Playbook / Template
   ↓ 执行
 
-Control / Evidence
+控制 / 证据
   ↓ 证明落实
 ~~~
 

@@ -23,21 +23,21 @@ parent:
 - 代码进入公司受控 Git。
 - main/master/release/production 等关键分支保护。
 - 普通开发不能 Force Push 受保护分支。
-- 合并通过 PR/MR 与独立 Review。
-- 高价值仓库考虑 CODEOWNERS/双人 Review。
-- 管理员、仓库可见性和 Token 变化可审计。
+- 合并通过 PR/MR 与独立评审。
+- 高价值仓库考虑 CODEOWNERS/双人评审。
+- 管理员、仓库可见性和令牌变化可审计。
 - 一人一号，高权限 MFA，离职及时回收。
-- CI Token 与个人 Token 分离。
-- Token 有 Owner、Purpose、Scope、Expiry、Rotation、Revocation。
+- CI 令牌与个人令牌分离。
+- 令牌有负责人、用途、范围、到期时间、轮换、吊销。
 
-## Code Review 重点
+## 代码评审重点
 
-Authentication/Authorization、SQL/File/Network、Secret、Dependency、Jenkinsfile/Dockerfile、IaC、管理接口。
+Authentication/Authorization、SQL/File/Network、凭据、Dependency、Jenkinsfile/Dockerfile、IaC、管理接口。
 
-## Evidence
+## 证据
 
-Git Protection、PR/MR、Review、Admin List、Token Register、Audit Log。
+Git Protection、PR/MR、评审、管理员 List、令牌 Register、审计日志。
 
-## Controls
+## 控制项
 
 SEC-SUP-002、SEC-IAM-*、SEC-APP-*。

@@ -23,7 +23,7 @@ related:
 ---
 # 20 - PSIRT 与漏洞披露
 
-> 本文档用于处理外部安全研究人员、客户、合作伙伴或第三方发现的产品漏洞，建立从接收、确认、修复、协调披露到客户通知的 Product Security Incident Response Team（PSIRT）流程。
+> 本文档用于处理外部安全研究人员、客户、合作伙伴或第三方发现的产品漏洞，建立从接收、确认、修复、协调披露到客户通知的 产品安全事件响应团队（PSIRT）流程。
 
 ## 1. 目标
 
@@ -48,7 +48,7 @@ related:
 | 角色 | 职责 |
 |---|---|
 | PSIRT Lead | 总协调 |
-| Product Security | 技术验证与风险 |
+| 产品安全 | 技术验证与风险 |
 | Product Team | 修复 |
 | Release | 版本发布 |
 | Legal | 法律/披露支持 |
@@ -74,23 +74,21 @@ related:
 - Reporter。
 - Contact。
 - Asset/Product。
-- Version。
+- 版本。
 - Vulnerability。
 - Reproduction。
 - Impact。
-- Evidence。
+- 证据。
 - Disclosure Intent。
 
-## 7. 自动回复
-
-报告收到后 SHOULD 快速确认：
+## 7. 自动回复报告收到后 SHOULD 快速确认：
 
 - 已收到。
 - Case ID。
 - 后续沟通方式。
 - 不承诺未评估的奖励/结果。
 
-## 8. Case ID
+## 8. 事件编号（Case ID）
 
 示例：
 
@@ -126,7 +124,7 @@ PSIRT-2026-000001
 - 数据影响。
 - Exploit。
 
-## 12. Critical 报告
+## 12. 严重漏洞报告
 
 Critical 触发：
 
@@ -135,11 +133,9 @@ Critical 触发：
 - PSIRT Lead。
 - 必要时公司 Incident Response。
 
-## 13. Duplicate
+## 13. 重复报告重复报告应礼貌说明已经跟踪，但不向无权限人员披露其他研究员身份或未公开细节。
 
-重复报告应礼貌说明已经跟踪，但不向无权限人员披露其他研究员身份或未公开细节。
-
-## 14. Out of Scope
+## 14. 范围外
 
 如果不属于公司资产：
 
@@ -147,27 +143,25 @@ Critical 触发：
 - 不鼓励继续超范围测试。
 - 如能确认正确联系人，可提供适当转介。
 
-## 15. Safe Harbor
+## 15. 安全港条款
 
 如果公司建立公开 VDP，应明确在研究人员遵守规则情况下，公司对善意安全研究的态度。具体法律文本必须由法务审核。
 
-## 16. VDP Scope
+## 16. 漏洞披露计划（VDP）范围公开说明：
 
-公开说明：
-
-- In Scope。
-- Out of Scope。
+- In 范围。
+- Out of 范围。
 - 禁止 DDoS。
 - 禁止社会工程（如适用）。
 - 数据最小化。
 - 不访问他人数据。
 - 停止条件。
 
-## 17. Bug Bounty
+## 17. 漏洞赏金计划
 
 若未来建立奖励计划，需要额外定义：
 
-- Scope。
+- 范围。
 - Reward Tier。
 - Eligibility。
 - Duplicate。
@@ -175,7 +169,7 @@ Critical 触发：
 - Payment。
 - Disclosure。
 
-## 18. Researcher Communication
+## 18. 研究人员沟通
 
 沟通原则：
 
@@ -218,11 +212,11 @@ Disclosure
 
 哪些版本提供修复由 Support Policy 决定。
 
-## 21. Embargo
+## 21. 协调披露期
 
 修复期间可与 Reporter 协调合理 Embargo，以降低客户在补丁可用前被攻击的风险。
 
-## 22. CVE Coordination
+## 22. CVE 协调
 
 根据公司产品和漏洞情况决定是否：
 
@@ -232,7 +226,7 @@ Disclosure
 
 CVE 申请与否不影响内部必须修复。
 
-## 23. Upstream Vulnerability
+## 23. 上游漏洞
 
 如果漏洞来自开源上游：
 
@@ -241,20 +235,20 @@ CVE 申请与否不影响内部必须修复。
 - 评估公司是否需要临时 Patch。
 - 跟踪上游版本。
 
-## 24. Downstream Notification
+## 24. 下游通知
 
 如果公司组件被下游产品使用，应识别受影响产品并协调修复。
 
-## 25. Advisory
+## 25. 安全公告
 
 正式安全公告包含：
 
 - Identifier。
 - Summary。
-- Affected Version。
+- Affected 版本。
 - Severity。
 - Impact。
-- Fixed Version。
+- Fixed 版本。
 - Mitigation。
 - Credit。
 - Timeline。
@@ -263,7 +257,7 @@ CVE 申请与否不影响内部必须修复。
 
 公开 PoC/利用细节的时间和深度应根据修复可用性、客户升级情况和实际风险决定。
 
-## 27. Customer Notification
+## 27. 客户通知
 
 重大漏洞：
 
@@ -272,20 +266,18 @@ CVE 申请与否不影响内部必须修复。
 - 提供 Workaround。
 - 提供升级验证方式。
 
-## 28. Cloud/SaaS
+## 28. 云 / SaaS
 
 SaaS 漏洞如果公司已服务端修复，也应根据事件影响判断是否需要客户通知或安全公告。
 
-## 29. Secret/数据报告
-
-外部报告如果包含客户数据或 Secret：
+## 29. 凭据 / 数据泄露报告外部报告如果包含客户数据或 凭据：
 
 - 立即限制证据传播。
-- 吊销 Secret。
+- 吊销 凭据。
 - 评估数据事件。
 - 请求 Reporter 最小化保存。
 
-## 30. Report Retention
+## 30. 报告保留
 
 PSIRT Case 保存：
 
@@ -297,7 +289,7 @@ PSIRT Case 保存：
 - Advisory。
 - Disclosure。
 
-## 31. Root Cause
+## 31. 根因
 
 重大产品漏洞修复后分析：
 
@@ -306,7 +298,7 @@ PSIRT Case 保存：
 - 是否影响其他产品。
 - 是否应增加 SDL 控制。
 
-## 32. Systemic Fix
+## 32. 系统性修复
 
 例如：
 
@@ -328,7 +320,7 @@ PSIRT Case 保存：
 
 避免收到报告数周无反馈。
 
-## 34. Metrics
+## 34. 度量
 
 - 报告数量。
 - 有效率。
@@ -342,7 +334,7 @@ PSIRT Case 保存：
 ## 35. P0
 
 1. security@company。
-2. PSIRT Owner。
+2. PSIRT 负责人。
 3. Case ID。
 4. 接收/验证/修复流程。
 5. Advisory 模板。
@@ -368,7 +360,7 @@ PSIRT Case 保存：
 - Case。
 - Reporter Communication。
 - Validation。
-- Risk。
+- 风险。
 - Fix。
 - Release。
 - Advisory。
@@ -389,7 +381,7 @@ PSIRT Case 保存：
 
 - CISA Vulnerability Disclosure Program 思路
 - NIST SSDF
-- 公司 Product Security 与漏洞管理规范
+- 公司产品安全与漏洞管理规范
 
 ## 41. 变更记录
 
@@ -401,10 +393,10 @@ PSIRT Case 保存：
 ## Obsidian 关联知识
 
 > [!tip] 图谱导航
-> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。
+> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian 全局图谱 / 局部图谱。业务正文请维护在上方章节。
 
 - **上级导航**：[[docs/公司安全知识图谱|公司安全知识图谱]]
-- **前置知识**：[[docs/09-漏洞管理与授权渗透测试|09 漏洞管理与授权渗透测试]] · [[docs/18-产品安全与默认安全|18 Product Security 与 Secure by Default]]
+- **前置知识**：[[docs/09-漏洞管理与授权渗透测试|09 漏洞管理与授权渗透测试]] · [[docs/18-产品安全与默认安全|18 产品安全与默认安全]]
 - **下游知识**：[[docs/11-安全事件与应急响应|11 安全事件与应急响应]]
 - **横向关联**：[[docs/27-第三方风险管理|27 第三方风险管理]]
 

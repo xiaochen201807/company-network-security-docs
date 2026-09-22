@@ -23,12 +23,12 @@ parent:
 | 字段 | 内容 |
 |---|---|
 | AI 应用 | |
-| Owner | |
+| 负责人 | |
 | Model/Provider | |
 | 环境 | |
 | 是否 Agent | 是 / 否 |
 | 是否 RAG | 是 / 否 |
-| 是否 Tool/MCP | 是 / 否 |
+| 是否工具/MCP | 是 / 否 |
 
 ## 2. 数据
 
@@ -40,15 +40,15 @@ parent:
 
 ## 3. RAG
 
-- [ ] 数据源有 Owner
+- [ ] 数据源有负责人
 - [ ] 用户权限贯穿检索
 - [ ] 租户隔离
 - [ ] 数据删除同步
 - [ ] Poisoning 风险评估
 
-## 4. Agent / Tool
+## 4. 智能体 / 工具
 
-| Tool | Permission | Data | High Risk | Human Approval |
+| 工具 | Permission | Data | High 风险 | Human Approval |
 |---|---|---|---|---|
 | | | | | |
 
@@ -56,17 +56,17 @@ parent:
 - [ ] Timeout
 - [ ] Budget
 - [ ] Kill Switch
-- [ ] Audit Log
+- [ ] 审计日志
 
 ## 5. Prompt Injection
 
 - [ ] Direct Injection Test
 - [ ] Indirect Injection Test
-- [ ] Tool Abuse Test
+- [ ] 工具 Abuse Test
 - [ ] Data Leakage Test
 - [ ] Authorization Test
 
-## 6. Output
+## 6. 输出
 
 - [ ] 输出不直接执行 Shell/SQL
 - [ ] 传统输入校验仍存在
@@ -76,6 +76,4 @@ parent:
 
 - [ ] 通过
 - [ ] 有条件通过
-- [ ] 阻断
-
-风险与整改：
+- [ ] 阻断风险与整改：

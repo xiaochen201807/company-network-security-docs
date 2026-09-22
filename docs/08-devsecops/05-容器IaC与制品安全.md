@@ -18,21 +18,21 @@ parent:
 ---
 # 容器、IaC 与制品安全标准
 
-## Container
+## 容器
 
 - 基础镜像来自批准来源。
 - 使用明确版本/摘要策略。
 - 镜像扫描 OS 与应用依赖。
-- Secret 不写入镜像层。
+- 凭据 不写入镜像层。
 - 非必要不 root/privileged。
 - Capability 最小化。
 - 不无控制挂载 docker.sock/宿主目录。
 
 ## IaC
 
-Terraform、Helm、Kubernetes YAML、Ansible 等采用 Git、Review、Secret Scan、IaC Scan；生产变更有 Plan/Approval，State 受控。
+Terraform、Helm、Kubernetes YAML、Ansible 等采用 Git、评审、凭据扫描（Secret Scan）、IaC Scan；生产变更有 Plan/Approval，State 受控。
 
-## Artifact Repository
+## 制品仓库
 
 - Release 不可覆盖。
 - Developer 默认无正式制品删除权限。
@@ -42,8 +42,8 @@ Terraform、Helm、Kubernetes YAML、Ansible 等采用 Git、Review、Secret Sca
 
 ## Kubernetes
 
-关注 privileged、hostNetwork/hostPath、root、ServiceAccount、RBAC、Secret、Resource Limit、SecurityContext。
+关注 privileged、hostNetwork/hostPath、root、ServiceAccount、RBAC、凭据、Resource Limit、SecurityContext。
 
-## Controls
+## 控制项
 
 SEC-SUP-001、SEC-SUP-004、SEC-CLD-*。

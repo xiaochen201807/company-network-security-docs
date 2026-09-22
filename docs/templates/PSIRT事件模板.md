@@ -26,10 +26,10 @@ parent:
 | Reporter | |
 | Contact | |
 | Product/Asset | |
-| Version | |
+| 版本 | |
 | Received Time | |
-| PSIRT Owner | |
-| Status | |
+| PSIRT 负责人 | |
+| 状态 | |
 
 ## 原始报告摘要
 
@@ -54,14 +54,14 @@ parent:
 
 | 项目 | 内容 |
 |---|---|
-| Fix Owner | |
-| Fixed Version | |
+| Fix 负责人 | |
+| Fixed 版本 | |
 | Workaround | |
 | Target Release | |
 
 ## 沟通时间线
 
-| 时间 | 沟通/动作 | Owner |
+| 时间 | 沟通/动作 | 负责人 |
 |---|---|---|
 | | | |
 
@@ -73,6 +73,6 @@ parent:
 - [ ] Reporter Credit
 - [ ] Public Disclosure
 
-## Root Cause
+## 根因
 
-## Systemic Improvement
+## 系统性改进
