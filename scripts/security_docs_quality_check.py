@@ -37,60 +37,60 @@ UNCHECKED_RE = re.compile(r"^- \[ \]\s+", re.M)
 EXPECTED_CORE_RANGE = range(0, 31)
 
 REQUIRED_GOVERNANCE = (
-    "docs/governance/README.md",
-    "docs/governance/security-control-catalog.md",
-    "docs/governance/security-current-target-profile.md",
-    "docs/governance/security-raci.md",
-    "docs/governance/company-security-parameters-register.md",
-    "docs/governance/document-hierarchy-and-maintenance.md",
+    "docs/governance/安全治理总览.md",
+    "docs/governance/安全控制目录.md",
+    "docs/governance/安全现状与目标画像.md",
+    "docs/governance/安全职责RACI.md",
+    "docs/governance/公司安全参数登记表.md",
+    "docs/governance/文档层级与维护规则.md",
 )
 
 REQUIRED_NAVIGATION = (
-    "docs/knowledge-map.md",
-    "docs/obsidian-usage.md",
+    "docs/公司安全知识图谱.md",
+    "docs/Obsidian使用指南.md",
 )
 
 REQUIRED_HIERARCHY_ARTIFACTS = (
-    "docs/policies/information-security-policy.md",
-    "docs/procedures/critical-vulnerability-sop.md",
-    "docs/procedures/employee-offboarding-sop.md",
-    "docs/playbooks/account-compromise-playbook.md",
-    "docs/playbooks/secret-leak-playbook.md",
+    "docs/policies/信息安全政策.md",
+    "docs/procedures/严重漏洞处置SOP.md",
+    "docs/procedures/员工离职与转岗权限回收SOP.md",
+    "docs/playbooks/账号失陷处置手册.md",
+    "docs/playbooks/凭据泄露处置手册.md",
 )
 
 REQUIRED_TEMPLATES = (
-    "docs/templates/asset-inventory-template.md",
-    "docs/templates/access-request-and-review-template.md",
-    "docs/templates/vulnerability-record-template.md",
-    "docs/templates/vulnerability-exception-template.md",
-    "docs/templates/penetration-test-authorization-template.md",
-    "docs/templates/monthly-vulnerability-report-template.md",
-    "docs/templates/security-incident-report-template.md",
-    "docs/templates/backup-recovery-exercise-template.md",
-    "docs/templates/audit-finding-remediation-template.md",
-    "docs/templates/security-baseline-check-template.md",
-    "docs/templates/threat-model-template.md",
-    "docs/templates/product-security-release-checklist.md",
-    "docs/templates/psirt-case-template.md",
-    "docs/templates/crypto-inventory-template.md",
-    "docs/templates/ai-security-review-template.md",
-    "docs/templates/mobile-security-checklist.md",
-    "docs/templates/privacy-impact-assessment-template.md",
-    "docs/templates/third-party-security-assessment-template.md",
-    "docs/templates/business-impact-analysis-template.md",
-    "docs/templates/email-phishing-incident-template.md",
+    "docs/templates/资产台账模板.md",
+    "docs/templates/权限申请与复核模板.md",
+    "docs/templates/漏洞记录模板.md",
+    "docs/templates/安全例外申请模板.md",
+    "docs/templates/授权渗透测试申请模板.md",
+    "docs/templates/漏洞月报模板.md",
+    "docs/templates/安全事件报告模板.md",
+    "docs/templates/备份恢复与容灾演练模板.md",
+    "docs/templates/审计发现与整改模板.md",
+    "docs/templates/安全基线检查记录模板.md",
+    "docs/templates/威胁建模模板.md",
+    "docs/templates/产品安全发布检查模板.md",
+    "docs/templates/PSIRT事件模板.md",
+    "docs/templates/密码与密钥资产清单模板.md",
+    "docs/templates/AI大模型与智能体安全评审模板.md",
+    "docs/templates/移动安全检查模板.md",
+    "docs/templates/隐私影响评估模板.md",
+    "docs/templates/第三方安全评估模板.md",
+    "docs/templates/业务影响分析模板.md",
+    "docs/templates/邮件钓鱼事件模板.md",
 )
 
 EXPECTED_SPLITS = {
     "08": {
-        "index": "docs/08-devsecops-and-supply-chain.md",
-        "archive": "docs/08-devsecops/reference-full-v1.md",
+        "index": "docs/08-DevSecOps与软件供应链安全.md",
+        "archive": "docs/08-devsecops/V1历史完整参考.md",
         "dir": "docs/08-devsecops",
         "minimum_subdocs": 7,
     },
     "09": {
-        "index": "docs/09-vulnerability-and-penetration-testing.md",
-        "archive": "docs/09-vulnerability/reference-full-v1.md",
+        "index": "docs/09-漏洞管理与授权渗透测试.md",
+        "archive": "docs/09-vulnerability/V1历史完整参考.md",
         "dir": "docs/09-vulnerability",
         "minimum_subdocs": 6,
     },
@@ -182,7 +182,7 @@ class QualityChecker:
 
     @staticmethod
     def is_archive(path: Path) -> bool:
-        return path.name.startswith("reference-full-") or "references" in path.parts
+        return path.name == "V1历史完整参考.md" or "references" in path.parts
 
     @staticmethod
     def is_template(path: Path) -> bool:
@@ -446,11 +446,11 @@ class QualityChecker:
                 property_problems += 1
 
             if is_core:
-                if "parent:" not in frontmatter or "[[docs/knowledge-map]]" not in frontmatter:
+                if "parent:" not in frontmatter or "[[docs/公司安全知识图谱]]" not in frontmatter:
                     self.add(
                         "ERROR",
                         "obsidian.parent",
-                        "Core document must point to docs/knowledge-map in parent property.",
+                        "Core document must point to docs/公司安全知识图谱 in parent property.",
                         path,
                     )
                     property_problems += 1
@@ -569,7 +569,7 @@ class QualityChecker:
                 )
 
     def check_knowledge_map(self) -> None:
-        path = self.root / "docs/knowledge-map.md"
+        path = self.root / "docs/公司安全知识图谱.md"
         if not path.exists():
             self.add(
                 "ERROR",
@@ -719,7 +719,7 @@ class QualityChecker:
         return [cell.strip() for cell in stripped[1:-1].split("|")]
 
     def check_control_catalog(self, files: Iterable[Path]) -> None:
-        catalog_path = self.root / "docs/governance/security-control-catalog.md"
+        catalog_path = self.root / "docs/governance/安全控制目录.md"
         if not catalog_path.exists():
             return
 
@@ -826,7 +826,7 @@ class QualityChecker:
         }
 
     def check_current_target_profile(self) -> None:
-        path = self.root / "docs/governance/security-current-target-profile.md"
+        path = self.root / "docs/governance/安全现状与目标画像.md"
         if not path.exists():
             return
 
@@ -877,7 +877,7 @@ class QualityChecker:
         }
 
     def check_parameters_register(self) -> None:
-        path = self.root / "docs/governance/company-security-parameters-register.md"
+        path = self.root / "docs/governance/公司安全参数登记表.md"
         if not path.exists():
             return
 

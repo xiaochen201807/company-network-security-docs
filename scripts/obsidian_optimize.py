@@ -45,51 +45,51 @@ CORE = {
 }
 
 EXTRA_NOTES = {
-    "docs/knowledge-map.md": {
+    "docs/公司安全知识图谱.md": {
         "alias": "公司安全知识图谱", "type": "moc", "domain": "security-program",
         "phase": ["govern","identify","protect","detect","respond","recover"], "priority": "P0",
-        "parent": [], "related": ["docs/00-security-overview", "docs/governance/README", "docs/obsidian-usage"],
+        "parent": [], "related": ["docs/00-公司安全体系总览", "docs/governance/安全治理总览", "docs/Obsidian使用指南"],
     },
-    "docs/governance/README.md": {
+    "docs/governance/安全治理总览.md": {
         "alias": "Security Governance V2.0", "type": "moc", "domain": "governance",
-        "phase": ["govern"], "priority": "P0", "parent": ["docs/knowledge-map"],
+        "phase": ["govern"], "priority": "P0", "parent": ["docs/公司安全知识图谱"],
         "related": [
-            "docs/governance/security-control-catalog",
-            "docs/governance/security-current-target-profile",
-            "docs/governance/security-raci",
-            "docs/governance/company-security-parameters-register",
-            "docs/governance/document-hierarchy-and-maintenance",
+            "docs/governance/安全控制目录",
+            "docs/governance/安全现状与目标画像",
+            "docs/governance/安全职责RACI",
+            "docs/governance/公司安全参数登记表",
+            "docs/governance/文档层级与维护规则",
         ],
     },
-    "docs/governance/security-control-catalog.md": {
+    "docs/governance/安全控制目录.md": {
         "alias": "Security Control Catalog", "type": "catalog", "domain": "governance",
-        "phase": ["govern"], "priority": "P0", "parent": ["docs/governance/README"],
-        "related": ["docs/governance/security-current-target-profile", "docs/governance/security-raci", "docs/13-compliance-and-audit"],
+        "phase": ["govern"], "priority": "P0", "parent": ["docs/governance/安全治理总览"],
+        "related": ["docs/governance/安全现状与目标画像", "docs/governance/安全职责RACI", "docs/13-合规与审计"],
     },
-    "docs/governance/security-current-target-profile.md": {
+    "docs/governance/安全现状与目标画像.md": {
         "alias": "Security Current Target Profile", "type": "profile", "domain": "governance",
-        "phase": ["govern"], "priority": "P0", "parent": ["docs/governance/README"],
-        "related": ["docs/governance/security-control-catalog", "docs/governance/company-security-parameters-register", "docs/13-compliance-and-audit"],
+        "phase": ["govern"], "priority": "P0", "parent": ["docs/governance/安全治理总览"],
+        "related": ["docs/governance/安全控制目录", "docs/governance/公司安全参数登记表", "docs/13-合规与审计"],
     },
-    "docs/governance/security-raci.md": {
+    "docs/governance/安全职责RACI.md": {
         "alias": "Security RACI", "type": "matrix", "domain": "governance",
-        "phase": ["govern"], "priority": "P0", "parent": ["docs/governance/README"],
-        "related": ["docs/governance/security-control-catalog", "docs/01-governance-and-policy"],
+        "phase": ["govern"], "priority": "P0", "parent": ["docs/governance/安全治理总览"],
+        "related": ["docs/governance/安全控制目录", "docs/01-安全治理与制度"],
     },
-    "docs/governance/company-security-parameters-register.md": {
+    "docs/governance/公司安全参数登记表.md": {
         "alias": "公司安全参数登记表", "type": "register", "domain": "governance",
-        "phase": ["govern"], "priority": "P0", "parent": ["docs/governance/README"],
-        "related": ["docs/governance/security-current-target-profile", "docs/00-security-overview"],
+        "phase": ["govern"], "priority": "P0", "parent": ["docs/governance/安全治理总览"],
+        "related": ["docs/governance/安全现状与目标画像", "docs/00-公司安全体系总览"],
     },
-    "docs/governance/document-hierarchy-and-maintenance.md": {
+    "docs/governance/文档层级与维护规则.md": {
         "alias": "安全文档层级与维护规则", "type": "standard", "domain": "governance",
-        "phase": ["govern"], "priority": "P1", "parent": ["docs/governance/README"],
-        "related": ["docs/knowledge-map", "docs/01-governance-and-policy"],
+        "phase": ["govern"], "priority": "P1", "parent": ["docs/governance/安全治理总览"],
+        "related": ["docs/公司安全知识图谱", "docs/01-安全治理与制度"],
     },
-    "docs/obsidian-usage.md": {
+    "docs/Obsidian使用指南.md": {
         "alias": "Obsidian 使用指南", "type": "guide", "domain": "security-program",
-        "phase": ["govern"], "priority": "P1", "parent": ["docs/knowledge-map"],
-        "related": ["docs/knowledge-map", "docs/governance/README"],
+        "phase": ["govern"], "priority": "P1", "parent": ["docs/公司安全知识图谱"],
+        "related": ["docs/公司安全知识图谱", "docs/governance/安全治理总览"],
     },
 }
 
@@ -182,7 +182,7 @@ def relation_block(num: int, meta: dict) -> str:
         "> [!tip] 图谱导航",
         "> 本区由 scripts/obsidian_optimize.py 维护，用于 Obsidian Global Graph / Local Graph。业务正文请维护在上方章节。",
         "",
-        "- **上级导航**：[[docs/knowledge-map|公司安全知识图谱]]",
+        "- **上级导航**：[[docs/公司安全知识图谱|公司安全知识图谱]]",
         f"- **前置知识**：{links(meta['up'])}",
         f"- **下游知识**：{links(meta['down'])}",
         f"- **横向关联**：{links(meta['cross'])}",
@@ -210,7 +210,7 @@ def apply_core() -> int:
             domain=meta["domain"],
             phase=meta["phase"],
             priority=meta["priority"],
-            parent=["docs/knowledge-map"],
+            parent=["docs/公司安全知识图谱"],
             related=[vault_stem(core_path(n)) for n in related_nums],
         )
         new = replace_frontmatter(text, frontmatter)
@@ -243,15 +243,15 @@ def apply_extra() -> int:
 def apply_supporting() -> int:
     changed = 0
     split_specs = [
-        (DOCS / "08-devsecops", "devsecops", "protect", "docs/08-devsecops-and-supply-chain"),
-        (DOCS / "09-vulnerability", "vulnerability-management", "detect", "docs/09-vulnerability-and-penetration-testing"),
+        (DOCS / "08-devsecops", "devsecops", "protect", "docs/08-DevSecOps与软件供应链安全"),
+        (DOCS / "09-vulnerability", "vulnerability-management", "detect", "docs/09-漏洞管理与授权渗透测试"),
     ]
     for directory, domain, phase, parent in split_specs:
         if not directory.exists():
             continue
         for path in sorted(directory.glob("*.md")):
             text = path.read_text(encoding="utf-8")
-            archived = path.name.startswith("reference-full-")
+            archived = path.name == "V1历史完整参考.md"
             title = re.search(r"^#\s+(.+)$", text, re.M)
             alias = title.group(1).strip() if title else path.stem
             frontmatter = make_frontmatter(
@@ -283,7 +283,7 @@ def apply_supporting() -> int:
             phase = ["govern"] if folder in {"policies", "templates"} else ["respond"]
             frontmatter = make_frontmatter(
                 alias=alias, note_type=note_type, domain=domain, phase=phase,
-                priority="P1", parent=["docs/knowledge-map"], related=[],
+                priority="P1", parent=["docs/公司安全知识图谱"], related=[],
             )
             new = replace_frontmatter(text, frontmatter)
             if new != text:
